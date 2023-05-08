@@ -9555,3 +9555,16 @@ section.resource-section-1 .thumbnial.thumbnial1 .img-thumbnial img {
         max-width: 260px;
     }
 }
+
+@media(max-width:767px){
+.accordion-item:last-of-type .accordion-button.collapsed a.nav-link.mb-0.collapsed {
+    width: 50%;
+    padding: 0;
+}
+.card-header.bg-white.row.justify-content-between.m-0 p.mb-0.d-inline {
+    max-width: 100% !important;
+    width: 100%;
+    position: relative;
+    padding: 0;
+}
+}
