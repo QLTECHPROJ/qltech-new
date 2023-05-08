@@ -24,7 +24,7 @@ class Randomevent extends React.Component{
 				title
 				slug
 				events{
-					date(formatString: "D MMMM,Y")
+					date
 					image{
                         sourceUrl
                     }
