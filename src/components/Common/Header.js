@@ -1,17 +1,19 @@
-import React, {Component} from 'react';
-import { Link, StaticQuery, graphql } from 'gatsby'
-import { Button,Form,Image,ListGroup,Navbar,Container,Modal } from 'react-bootstrap'
-import logo from '../../img/logo.png'
-import ServiceHeader from './ServiceHeader'
-import IndustriesHeader from './IndustriesHeader'
-import PlatformHeader from './PlatformHeader'
-import ProcessHeader from './ProcessHeader'
+import React, { useState, useEffect,Component } from "react"
+import { Link, StaticQuery, navigate, useStaticQuery, graphql } from "gatsby"
+
+import { Modal, Form, Button } from 'react-bootstrap';
 import Cookies from 'universal-cookie';
-import { init } from '@amplitude/analytics-browser';
-import { track } from '@amplitude/analytics-browser';
-class Header extends Component {
+import "../../stylee.css"
+import logo from '../../image/logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import ScrollToTopButton from "../scroll_top/scroll_top";
+
+
+class NavBar extends Component {
 	
-	    constructor(props) {
+	constructor(props) {
 		super(props);
 		this.state = {
 			isTop: true,
@@ -21,19 +23,22 @@ class Header extends Component {
 			code:"",
 			shown: "d-none",
 			isOpen:false,
+			isOpene:false,
 			iscookie:0,
-			isBoxVisible:"opa"
+			isBoxVisible:"opa",
+			activeMenuItem: 0
 		};
-		 this.modalOpen = this.modalOpen.bind(this);
-        	this.modalClose = this.modalClose.bind(this);
+		this.modalOpen = this.modalOpen.bind(this);
+		this.modalOpene = this.modalOpene.bind(this);
+		this.modalClose = this.modalClose.bind(this);
+		this.modalClosee = this.modalClosee.bind(this);
 		this.CheckModel = this.CheckModel.bind(this);
-		this.createUUID = this.createUUID.bind(this);	
-		    this.handleClick = this.handleClick.bind(this);
-		    this.handleChange = this.handleChange.bind(this);
-		    
-	}
-	CheckModel(){
+		this.handleClick = this.handleClick.bind(this);
+		this.handleChange = this.handleChange.bind(this);
 		
+	}
+	
+	CheckModel(){
 		const cookies = new Cookies();
 		if(cookies.get("Popup") == undefined){
 			this.setState({
@@ -79,57 +84,40 @@ class Header extends Component {
 			console.log("there");	
 		}
 	}
-	modalOpen(){
-        this.setState({
-            isOpen:true,
-        })
-    }
-    modalClose(){
-        this.setState({
-            isOpen:false,
-        })
-    }
-	 createUUID(){
-    		var dt = new Date().getTime();
-    		var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-        		var r = (dt + Math.random()*16)%16 | 0;
-        		dt = Math.floor(dt/16);
-        		return (c=='x' ? r :(r&0x3|0x8)).toString(16);
-    		});
-    		return uuid;
-	}
-	componentDidMount() {
-		
-		
-		
-	const cookies = new Cookies();
-		var aid =  cookies.get('aid');
-		if(aid == undefined){
-			 var code = this.createUUID();
-		 	cookies.set("aid",code,{ domain: '.qltech.com.au' , path: '/' });
-		}	
-		var url_action = window.location.href;
-		init("30c4c799e1eda5b6cfe2d675f3b9e12e");
-		console.log(document.title)
-		const anid = cookies.get('aid');
-		const eventProperties = {
-		  location: url_action,
-		anonymoudId: anid,
-			pageName:document.title
-			
-		};
-		console.log(eventProperties);
-		track('Page Viewed', eventProperties);
-		this.CheckModel();
-    }
 	
-	render() {
-		
+	modalOpen(){
+		this.setState({
+			isOpen:true,
+		})
+	}
+	
+	modalOpene(){
+		this.setState({
+			isOpene:true,
+		})
+	}
+	
+	modalClose(){
+		this.setState({
+			isOpen:false,
+		})
+	}
+	
+	modalClosee(){
+		this.setState({
+			isOpene:false,
+		})
+	}
+	
+	componentDidMount() {
+			
+		this.CheckModel();
+	}
 		
 
+	render() {
 		return (
 			<>
-			
 			<Modal animation={false} fullscreen={true} keyboard={false} backdrop="static"  show={this.state.isOpen} onHide={this.modalClose} size="lg" className="video-modal model-custom"
             aria-labelledby="contained-modal-title-vcenter"
             centered >
@@ -148,178 +136,144 @@ class Header extends Component {
 				  <Button  id="btnn" className={this.state.isBoxVisible} onClick={this.handleClick} variant="primary">Continue</Button>
 				</Modal.Footer>
             </Modal>
-			
-			
-				<StaticQuery
-    query={graphql`
-      query {
-        allWordpressMenuLocation(filter: {menu: {slug: {eq: "main-menu"}}}) {
-    edges {
-      node {
-        id
-        menuData {
-          items {
-            ID
-            slug
-            title
-            child_items {
-              ID
-              slug
-              title
-            }
-          }
-        }
-      }
-    }
-  }
-      }
-    `}
-    render={data => (
-		<div>
-		
-      <header>
-        <div className="social-header">
-            <div className="container d-flex justify-content-between">
-                <p className="key-message "> <span className="mr-2 d-none d-sm-inline">Best Practices</span>
-                    <span className="mr-2 d-none  d-sm-inline">Robust Processes</span>
-                    <span className="mr-2 d-none  d-sm-inline">Measurable Results</span>
-                </p>
-                <ul  className="social-list justify-content-end ">
-                    <li>
-                        <a href="tel:+61 8 6262 3559" ><i className="fa fa-phone mr-2"></i><span className="d-inline d-sm-none  d-md-inline">+61 8 6262 3559</span></a>
-                    </li>
-                     <li>
-                        <a target="_blank" href="mailto:support@qltech.com.au"><i className="fa fa-envelope  mr-2"></i><span className="d-none d-md-inline">Send Email</span></a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://www.facebook.com/QLTechAU/" className=""><i className="fa fa-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://www.linkedin.com/company/qltechau" className=""><i className="fa fa-linkedin"></i></a>
-                    </li>
-                   
-                </ul>
-            </div>
-        </div>
-        <div className="container">
-            <nav className="navbar navbar-expand-md navbar-light bg-none">   
-				<Link className="navbar-brand" to="/" >
-					<img src={logo} className="img-fluid" alt="" width="120px"/>
-				</Link>
-                <button className="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-				
-                <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul className="navbar-nav ">
-						{data &&
-              data.allWordpressMenuLocation &&
-              data.allWordpressMenuLocation.edges &&
-              data.allWordpressMenuLocation.edges[0] &&
-              data.allWordpressMenuLocation.edges[0].node &&
-              data.allWordpressMenuLocation.edges[0].node.menuData.items &&
-              data.allWordpressMenuLocation.edges[0].node.menuData.items.map(
-                (prop,i) => {
-					
-					return (
-						
-						<div key={i} >
-						{(prop.child_items ? (
-						
-							<>
-								{(prop.slug == 'services' ? (
-									<li className="nav-item dropdown position-static">
-									<a className="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button"
-									   data-toggle="dropdown">
-									   Services
-								   </a>
-                           <ul className="dropdown-menu ">
-                               <li className="service-menu">
-                                   <ServiceHeader />
-                               </li>
-                               <li className="other-menu border-right">
-                                   <span className="services-heading ">Industries</span>
-                                   <span className="services-description mb-2">Discover how we're helping transform myriad industries to win tomorrow’s customer</span>
-                                   <IndustriesHeader />
-                               </li>
-                               <li className="other-menu">
-                                   <span className="services-heading ">Platforms</span>
-                                   <span className="services-description mb-2">Explore possibilities and get the most from your technology stack</span>
-									<PlatformHeader />
-                               </li>
-                           </ul>
-                       </li>
-								
-								):(
-								<>
-									{(prop.slug == 'process' ? (<li className="nav-item dropdown position-static processMenu">
-                           <a className="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button"
-                               data-toggle="dropdown">
-                               Process
-                           </a>
-                           <ul className="dropdown-menu ">
-                               <li className="service-menu service-menu-full">
-                                    <ProcessHeader />
-                                </li>
-                              
-                              
-                           </ul>
-                       </li>) : (<li className="nav-item dropdown">
-								<a className="nav-link dropdown-toggle" data-toggle="dropdown" href="jacasvript:;">About</a>
-								<ul className="dropdown-menu row">
-								{prop && prop.child_items && prop.child_items.map((child, i) => {
-								return (<li key={i} ><Link className="dropdown-item"   to={"/"+child.slug+"/"}>{child.title}</Link></li> )
-							  })}</ul></li>))}	
-								
-								</>
-								
-								
-								
-								
-								
-								))}
-							</>
-						
-							) : (<li className="nav-item">
-							<Link className="nav-link" key={prop.id} to={"/"+prop.slug+"/"}>
-								{prop.title}
-							</Link>
-                        </li>))}
-						</div>
-					
-					)
+		    <StaticQuery
+      query={graphql`
+            query {
+              wpMenu(id: {eq: "dGVybToy"}) {
+                id
+                menuItems {
+                  nodes {
+                    id
+                    label
+                    url
+                  }
                 }
-              )}		<li className="nav-item d-md-none d-inline">
-                            <Link className="nav-link" to="/contact-us" >
-								Contact Us
-							</Link>
-                        </li>
-                        <li className="nav-item d-none  d-md-inline">
-                            <Link className="nav-link btn-default" to="/contact-us/" >
-								Contact Us
-							</Link>
-                        </li>
-                        
+              }
+              }
+            `}
+      render={data => (
+
+        <div>
+          <div /*classNameName={props.headervisiblity}*/>
+            <header id="header">
+              <nav className="navbar navbar-expand-lg header_innerd">
+                <div className="container">
+                  <div className="logo_image">
+                    <Link to="/" className="navbar-brand">
+                      <img src={logo} alt="" />
+                    </Link>
+                  </div>
+                  <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"><FontAwesomeIcon icon={faBars} /></span>
+                  </button>
+                  <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+                      {data &&
+                        data.wpMenu &&
+                        data.wpMenu.menuItems &&
+                        data.wpMenu.menuItems.nodes.map((prop, i) => {
+                          
+                          const itemToRender = prop.label === "Home" ?
+                            (
+                              <li className={`nav-item ${i === this.state.activeMenuItem ? "active" : ""}`}
+                                onClick={() => this.setState({ activeMenuItem: i })}>
+                                <Link
+                                  to={"/"}
+                                  className="nav-link"
+                                  activeClassName="active"
+                                >
+                                  {prop.label}
+                                </Link>
+                              </li>
+                            ) : prop.label === "What's New" ? (
+                              <li className={`nav-item ${i === this.state.activeMenuItem ? "active" : ""}`}
+                                onClick={() => this.setState({ activeMenuItem: i })}>
+                                <Link
+                                  to={"/news"}
+                                  className="nav-link"
+                                  activeClassName="active"
+                                >
+                                  {prop.label}
+                                </Link>
+                              </li>
+                            ) : (
+                              <li className={`nav-item ${i === this.state.activeMenuItem ? "active" : ""}`}
+                                onClick={() => this.setState({ activeMenuItem: i })}>
+                                <Link
+                                  to={
+                                    "/" +
+                                    prop.label
+                                      .replace(/\s+/g, "_")
+                                      .replace("'", "")
+                                      .toLowerCase()
+                                  }
+                                  className="nav-link"
+                                  activeClassName="active"
+                                >
+                                  {prop.label}
+                                </Link>
+                              </li>
+                            )
+
+                          return itemToRender;
+                        })
+                      }
+                      <div /*style={navev}*/></div>
                     </ul>
+                    <div className="our_cong d-flex">
+                      <div className="list_ys">
+                        <button onClick={this.modalOpene}>Contact Us</button>
+                      </div>
+                    </div>
+
+                  </div>
+
                 </div>
-            </nav>
+              </nav>
+
+            </header>
+          </div>
+                       
+         
+          <div className="scrollbtn">
+            <ScrollToTopButton />
+          </div>
+		  
+		  <Modal animation={false} fullscreen={true} keyboard={false} backdrop="static"  show={this.state.isOpene} onHide={this.modalClosee} size="lg" className="video-modal model-custom"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered >
+                <Modal.Body className="p-0 bodtr">
+                 <div className="fomr_raog">
+
+                    <div className="wpcf7 js" id="wpcf7-f463-o1" lang="en-US" dir="ltr">
+                      <div className="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+                    
+                      <iframe
+                        id="myIframe"
+                        src="https://development.qlspace.com.au/contact-us/"
+                        scrolling="no"
+                      ></iframe>
+                    </div>
+                  </div>		
+                </Modal.Body>
+				
+            </Modal>
+		  
+		  
+		  
+		  
+		  
+          
+
+            
         </div>
-    </header>
-	<span className="top-space"></span>	
-	</div>
-    )}
-  />
-		</>	
+      )}
+
+    />
+			</>
 		)
 	}
+
 }
 
-
-
-export default Header
-
-
-
-
-
+export default NavBar
