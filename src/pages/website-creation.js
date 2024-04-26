@@ -56,31 +56,6 @@ class FilterGrid extends React.Component {
 			</div>
 		</section>
 		
-		<section className="about-us-section-1  bg-white">
-		<div class="container">
-			<div class="main-panel">
-				<div class="row">
-					<div class="col-9 offset-md-1">
-						<h2 class="section-heading">{post.title}</h2>
-						<p class="label-text" angerouslySetInnerHTML={{ __html: post.description }} 
-						>
-					</div>
-				</div>
-			</div>
-		</div>
-		</section>
-		<section className="about-us-section-1  bg-white">
-		<div class="container">
-			<div class="main-panel">
-				<div class="row">
-					<div class="col-9 offset-md-1">
-						<h2 class="section-heading">{post.servicesTitle}</h2>
-						<p class="label-text" angerouslySetInnerHTML={{ __html: post.servicesDesc }} 
-					</div>
-				</div>
-			</div>
-		</div>
-		</section>
 		
 		<section className="about-us-section-1  bg-white">
 		<div class="container">
