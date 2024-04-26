@@ -100,6 +100,59 @@ class FilterGrid extends React.Component {
 						<h2 class="section-heading">We help transform and grow businesses for the next </h2>
 						
 					</div>
+					<div class="col-12">
+						<div class="row justify-content-center">
+							<div class="col-md-6 col-lg-4 mb-30">
+								<div class="price-item text-center">
+									<div class="price-top">
+										<h4>Personal</h4>
+										<h2 class="mb-0"><sup>$</sup>99</h2> <span class="text-capitalize">per year</span></div>
+									<div class="price-content">
+										<ul class="border-bottom mb-30 mt-md-4 pb-3 text-left">
+											<li> <i class="zmdi zmdi-check mr-2"></i> <span class="c-black">Eget erovtiu faucid</span></li>
+											<li> <i class="zmdi zmdi-check mr-2"></i> <span class="c-black">Cras justo odio</span></li>
+											<li> <i class="zmdi zmdi-check mr-2"></i> <span class="c-black">Morbi leo risus</span></li>
+											<li> <i class="zmdi zmdi-close mr-2"></i> <span>Porta consectetur ac</span></li>
+											<li> <i class="zmdi zmdi-close mr-2"></i> <span> Vestibulum at eros</span></li>
+											<li> <i class="zmdi zmdi-close mr-2"></i> <span>Adipisci atque beatae</span></li>
+										</ul> <a href="#" class="btn btn-custom">Buy now</a></div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-30">
+								<div class="price-item text-center popular">
+									<div class="price-top">
+										<h4>Business</h4>
+										<h2 class="mb-0"><sup>$</sup>299</h2> <span class="text-capitalize">per year</span></div>
+									<div class="price-content">
+										<ul class="border-bottom mb-30 mt-md-4 pb-3 text-left">
+											<li> <i class="zmdi zmdi-check mr-2"></i> <span class="c-black">Eget erovtiu faucid</span></li>
+											<li> <i class="zmdi zmdi-check mr-2"></i> <span class="c-black">Cras justo odio</span></li>
+											<li> <i class="zmdi zmdi-check mr-2"></i> <span class="c-black">Morbi leo risus</span></li>
+											<li> <i class="zmdi zmdi-close mr-2"></i> <span>Porta consectetur ac</span></li>
+											<li> <i class="zmdi zmdi-close mr-2"></i> <span> Vestibulum at eros</span></li>
+											<li> <i class="zmdi zmdi-close mr-2"></i> <span>Adipisci atque beatae</span></li>
+										</ul> <a href="#" class="btn btn-custom btn-light">Buy now</a></div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-30">
+								<div class="price-item text-center">
+									<div class="price-top">
+										<h4>Enterprise</h4>
+										<h2 class="mb-0"><sup>$</sup>399</h2> <span class="text-capitalize">per year</span></div>
+									<div class="price-content">
+										<ul class="border-bottom mb-30 mt-md-4 pb-3 text-left">
+											<li> <i class="zmdi zmdi-check mr-2"></i> <span class="c-black">Eget erovtiu faucid</span></li>
+											<li> <i class="zmdi zmdi-check mr-2"></i> <span class="c-black">Cras justo odio</span></li>
+											<li> <i class="zmdi zmdi-check mr-2"></i> <span class="c-black">Morbi leo risus</span></li>
+											<li> <i class="zmdi zmdi-close mr-2"></i> <span>Porta consectetur ac</span></li>
+											<li> <i class="zmdi zmdi-close mr-2"></i> <span> Vestibulum at eros</span></li>
+											<li> <i class="zmdi zmdi-close mr-2"></i> <span>Adipisci atque beatae</span></li>
+										</ul> <a href="#" class="btn btn-custom">Buy now</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
 				</div>
 			</div>
 		</div>
