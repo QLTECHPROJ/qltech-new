@@ -9,52 +9,14 @@ import Helmet from 'react-helmet'
 class FilterGrid extends React.Component {
   constructor(props) {
     super(props);
-    this.onFilterChange = this.onFilterChange.bind(this);
+   
   }
   
   componentDidMount() {
-    if (typeof window !== "undefined") {
-	var link = document.getElementById('Allcss');
-    link.click();
-	
-	document.querySelectorAll('.work-thumbnial').forEach(function(button) {
-		var classList = button.className.split(/\s+/);
-		
-		for (var i = 0; i < classList.length; i++) {
-			if(classList[i].indexOf(",") != -1){
-				classList[i].split(",").forEach(function(item){
-				   button.classList.add(item);
-				});
-			}
-		}
-	});
-	}
+    
   }
 
-  // Click Function
-  onFilterChange = (newFilter,id) => {
-	  
-	document.querySelectorAll('.flt').forEach(function(button) {	
-		button.classList.remove('menu-active');
-	});
-	document.querySelector("#"+id).classList.add('menu-active');  
-	  
-    if (this.iso === undefined) {
-      this.iso = new Isotope('#grid-container', {
-        itemSelector: '.grid-item',
-        layoutMode: "masonry",
-        percentPosition: true,
-        masonry: {
-          columnWidth: '.grid-sizer2'
-        }
-      });
-    }
-    if(newFilter === '*') {
-      this.iso.arrange({ filter: `*` });
-    } else {
-      this.iso.arrange({ filter: `.${newFilter}` });
-    }
-  }
+ 
 
   render() {
     console.log("pagessss");
