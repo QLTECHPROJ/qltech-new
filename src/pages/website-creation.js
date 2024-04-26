@@ -19,9 +19,9 @@ class FilterGrid extends React.Component {
  
 
   render() {
-    console.log("pagessss");
+    
 	  const post = this.props.data.allWpPage.edges[0].node.WSC;
-  
+  console.log(post);
     return(
       // Filter Buttons
 	  <Layout>
