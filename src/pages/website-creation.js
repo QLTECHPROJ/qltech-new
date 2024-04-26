@@ -21,7 +21,7 @@ class FilterGrid extends React.Component {
   render() {
     console.log("pagessss");
 	  const posts = this.props.data.allWpPage;
-   console.log(posts);
+   console.log(posts.edges[0]);
     return(
       // Filter Buttons
 	  <Layout>
@@ -54,6 +54,55 @@ class FilterGrid extends React.Component {
 					<li>Work</li>
 				</ul>
 			</div>
+		</section>
+		
+		<section className="about-us-section-1  bg-white">
+		<div class="container">
+			<div class="main-panel">
+				<div class="row">
+					<div class="col-9 offset-md-1">
+						<h2 class="section-heading">We help transform and grow businesses for the next </h2>
+						<p class="label-text">We offer end-to-end solutions to help transform businesses - strategise, develop, automate &amp; grow the brand’s online. In collaboration with our clients, we’ve successfully managed to help businesses increase productivity, reduce costs, enhance agility &amp; performance.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
+		<section className="about-us-section-1  bg-white">
+		<div class="container">
+			<div class="main-panel">
+				<div class="row">
+					<div class="col-9 offset-md-1">
+						<h2 class="section-heading">We help transform and grow businesses for the next </h2>
+						<p class="label-text">We offer end-to-end solutions to help transform businesses - strategise, develop, automate &amp; grow the brand’s online. In collaboration with our clients, we’ve successfully managed to help businesses increase productivity, reduce costs, enhance agility &amp; performance.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
+		<section className="about-us-section-1  bg-white">
+		<div class="container">
+			<div class="main-panel">
+				<div class="row">
+					<div class="col-9 offset-md-1">
+						<h2 class="section-heading">We help transform and grow businesses for the next </h2>
+						<p class="label-text">We offer end-to-end solutions to help transform businesses - strategise, develop, automate &amp; grow the brand’s online. In collaboration with our clients, we’ve successfully managed to help businesses increase productivity, reduce costs, enhance agility &amp; performance.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
+		<section className="about-us-section-1  bg-white">
+		<div class="container">
+			<div class="main-panel">
+				<div class="row">
+					<div class="col-9 offset-md-1">
+						<h2 class="section-heading">We help transform and grow businesses for the next </h2>
+						
+					</div>
+				</div>
+			</div>
+		</div>
 		</section>
 		
 		
