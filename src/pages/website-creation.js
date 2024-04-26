@@ -20,8 +20,8 @@ class FilterGrid extends React.Component {
 
   render() {
     console.log("pagessss");
-	  const posts = this.props.data.allWpPage;
-   console.log(posts.edges[0]);
+	  const post = this.props.data.allWpPage.edges[0].node.WSC;
+  
     return(
       // Filter Buttons
 	  <Layout>
@@ -61,8 +61,9 @@ class FilterGrid extends React.Component {
 			<div class="main-panel">
 				<div class="row">
 					<div class="col-9 offset-md-1">
-						<h2 class="section-heading">We help transform and grow businesses for the next </h2>
-						<p class="label-text">We offer end-to-end solutions to help transform businesses - strategise, develop, automate &amp; grow the brand’s online. In collaboration with our clients, we’ve successfully managed to help businesses increase productivity, reduce costs, enhance agility &amp; performance.</p>
+						<h2 class="section-heading">{post.title}</h2>
+						<p class="label-text" angerouslySetInnerHTML={{ __html: post.description }} 
+						>
 					</div>
 				</div>
 			</div>
@@ -73,35 +74,25 @@ class FilterGrid extends React.Component {
 			<div class="main-panel">
 				<div class="row">
 					<div class="col-9 offset-md-1">
-						<h2 class="section-heading">We help transform and grow businesses for the next </h2>
-						<p class="label-text">We offer end-to-end solutions to help transform businesses - strategise, develop, automate &amp; grow the brand’s online. In collaboration with our clients, we’ve successfully managed to help businesses increase productivity, reduce costs, enhance agility &amp; performance.</p>
+						<h2 class="section-heading">{post.servicesTitle}</h2>
+						<p class="label-text" angerouslySetInnerHTML={{ __html: post.servicesDesc }} 
 					</div>
 				</div>
 			</div>
 		</div>
 		</section>
+		
 		<section className="about-us-section-1  bg-white">
 		<div class="container">
 			<div class="main-panel">
 				<div class="row">
 					<div class="col-9 offset-md-1">
-						<h2 class="section-heading">We help transform and grow businesses for the next </h2>
-						<p class="label-text">We offer end-to-end solutions to help transform businesses - strategise, develop, automate &amp; grow the brand’s online. In collaboration with our clients, we’ve successfully managed to help businesses increase productivity, reduce costs, enhance agility &amp; performance.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		</section>
-		<section className="about-us-section-1  bg-white">
-		<div class="container">
-			<div class="main-panel">
-				<div class="row">
-					<div class="col-9 offset-md-1">
-						<h2 class="section-heading">We help transform and grow businesses for the next </h2>
+						<h2 class="section-heading">{post.packagesTitle}</h2>
 						
 					</div>
 					<div class="col-12">
 						<div class="row justify-content-center">
+							
 							<div class="col-md-6 col-lg-4 mb-30">
 								<div class="price-item text-center">
 									<div class="price-top">
@@ -187,6 +178,16 @@ const WC = () => (
 					id
 					WSC {
 					  title
+					   description
+					  servicesDesc
+					  servicesTitle
+					  packagesTitle
+					  packages {
+						packagesTitle
+						rows {
+						  text
+						}
+					  }
 					}
 				}
 			}
