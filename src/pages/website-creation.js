@@ -47,11 +47,11 @@ class FilterGrid extends React.Component {
 			<div className="container text-center">
 				<span className="section-subheading-heading">Professional Website Creation</span> 
 				<h1 className="section-heading">
-            Success stories
+            Professional Website Creation
 				</h1>
 				<ul className="breadcrumbs">
-					<li> <Link to="/">Professional Website Creation</Link> \</li>
-					<li>Work</li>
+					<li> <Link to="/">Home</Link> \</li>
+					<li>Professional Website Creation</li>
 				</ul>
 			</div>
 		</section>
@@ -59,7 +59,7 @@ class FilterGrid extends React.Component {
 		<div class="container">
 			<div class="main-panel">
 				<div class="row">
-					<div class="col-9 offset-md-1">
+					<div class="col-12">
 						<h2 class="section-heading">{post.title}</h2>
 						<div class="label-text" dangerouslySetInnerHTML={{ __html: post.description }} 
 						/>
@@ -72,7 +72,7 @@ class FilterGrid extends React.Component {
 		<div class="container">
 			<div class="main-panel">
 				<div class="row">
-					<div class="col-9 offset-md-1">
+					<div class="col-12">
 						<h2 class="section-heading">{post.servicesTitle}</h2>
 						<div class="label-text" dangerouslySetInnerHTML={{ __html: post.servicesDesc }} 
 						/>
@@ -86,7 +86,7 @@ class FilterGrid extends React.Component {
 		<div class="container">
 			<div class="main-panel">
 				<div class="row">
-					<div class="col-9 offset-md-1">
+					<div class="col-12">
 						<h2 class="section-heading">{post.packagesTitle}</h2>
 						
 					</div>
