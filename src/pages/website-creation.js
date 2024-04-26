@@ -82,6 +82,10 @@ const WC = () => (
 					title
 					databaseId
 					content
+					id
+					WSC {
+					  title
+					}
 				}
 			}
 		}
