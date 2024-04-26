@@ -108,11 +108,11 @@ class FilterGrid extends React.Component {
 												(pro,k) => {
 													return (	
 																		
-																		<li> <i class="zmdi zmdi-check mr-2"></i> <span class="c-black">{pro.text}</span></li>
+																		<li> <i class="fa fa-check mr-2"></i> <span class="c-black">{pro.text}</span></li>
 																		)
 												}
 											)}
-													</ul> <a href="#" class="btn btn-custom">Buy now</a></div>
+													</ul> </div>
 											</div>
 										</div>
 										</>	
