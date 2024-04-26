@@ -125,7 +125,7 @@ const WC = () => (
 		}
       }
 					  
-    }
+    
   `}
   render={(data, count) => <FilterGrid data={data} count={count} />}
   />
