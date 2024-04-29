@@ -79,18 +79,22 @@ class Webcontact extends React.Component{
 			
 			return false;
 		}
-
+const payload = {
+			 
+			  email: this.state.email,	
+				number: this.state.number
+				
+			 
+			}
 
 			axios({
 			  method: 'post',
-			  url: 'https://steamlinedesign.com/qltech/formbucket/',
+			  url: 'https://admin.qltech.com.au/wp-json/new_ql/v1/mail',
 			  data: payload, // you are sending body instead
-			  headers: {
-			   // 'Authorization': `bearer ${token}`,
-			  'Content-Type': 'multipart/form-data'
-			  }, 
+			 
 			}).then(function(response) {
-			window.location.href = "https://www.qltech.com.au/thank-you/";
+				console.log(response);
+			//window.location.href = "https://www.qltech.com.au/thank-you/";
 		    });	
 			
 		
