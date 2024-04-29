@@ -11,6 +11,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import axios from 'axios';
 import Cookies from 'universal-cookie';
 const recaptchaRef = React.createRef();
+import webcontact from '../components/Contact/webcontact'
 class FilterGrid extends React.Component {
   constructor(props) {
     super(props);
@@ -213,34 +214,7 @@ class FilterGrid extends React.Component {
 		</section>
 		<section className="about-us-section-1  bg-white">
 			<div class="container">
-				<form method="POST" id="form" action="">
-					<div class="row justify-content-center">
-						<div class="col-lg-8 col-md-10">
-							<div class="row">
-								<div class="col-md-6 mb-4">
-									<label class="label-text">Email</label>
-									<input type="email" class="form-control" value={this.state.email} onChange={this.email} placeholder="Your Email Address" name="email"  value="" required/>
-									{this.validator.message('Email', this.state.email, 'required|email')}
-								</div>
-								<div class="col-md-6 mb-4">
-									<label class="label-text">WhatsApp</label>
-									<input type="text" value={this.state.number} onChange={this.number} class="form-control" placeholder="Your WhatsApp Contact Number" name="number" required="" value="" required/>
-									{this.validator.message('Contact Number', this.state.number, 'required|numeric|min:10|max:10')}
-								</div>
-								<div className="col-md-12 mt-3">
-											<ReCAPTCHA
-												ref={recaptchaRef}
-												sitekey=" 6Lc5jjEUAAAAAI1yf3CfFogxqiok5pt7wcF7_SKJ"
-											/>
-										</div>
-								<p className={"text-danger er-msg "+this.state.shown_captcha} >Please Verify Captcha.</p>
-								<div class="col-md-12  mb-4 ">
-									<button type="button" onClick={this.submitForm} id="acone1" className="btn-default border-0 btn-sub" value="Submit">Submit</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</form>
+			<webcontact />
 			</div>
 		</section>
 		
