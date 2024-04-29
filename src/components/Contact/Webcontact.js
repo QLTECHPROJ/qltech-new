@@ -7,7 +7,7 @@ import { init } from '@amplitude/analytics-browser';
 import { track } from '@amplitude/analytics-browser';
 import { Identify, identify } from '@amplitude/analytics-browser';
 const recaptchaRef = React.createRef();
-class webcontact extends React.Component{
+class Webcontact extends React.Component{
 	
 	constructor(props) {
 		super(props);
@@ -232,5 +232,5 @@ identify(identifyObj);
   }
 }
 
-export default webcontact
+export default Webcontact
 
