@@ -93,8 +93,15 @@ const payload = {
 			  data: payload, // you are sending body instead
 			 
 			}).then(function(response) {
-				console.log(response);
-			//window.location.href = "https://www.qltech.com.au/thank-you/";
+				console.log(response.ResponseCode);
+				if(response.ResponseCode == 200){
+					window.location.href = "https://www.qltech.com.au/thank-you/";
+				}
+				else{
+					alert(response.ResponseMsg);
+					return false;
+				}
+			
 		    });	
 			
 		
