@@ -10,6 +10,7 @@ import SimpleReactValidator from 'simple-react-validator';
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from 'axios';
 import Cookies from 'universal-cookie';
+const recaptchaRef = React.createRef();
 class FilterGrid extends React.Component {
   constructor(props) {
     super(props);
