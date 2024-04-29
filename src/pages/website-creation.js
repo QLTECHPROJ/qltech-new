@@ -153,11 +153,11 @@ class FilterGrid extends React.Component {
 							<div class="row">
 								<div class="col-md-6 mb-4">
 									<label class="label-text">Email</label>
-									<input type="email" class="form-control" placeholder="Your Email Address" name="email" required="" value="">
+									<input type="email" class="form-control" placeholder="Your Email Address" name="email" required="" value="" />
 								</div>
 								<div class="col-md-6 mb-4">
 									<label class="label-text">WhatsApp</label>
-									<input type="text" class="form-control" placeholder="Your WhatsApp Contact Number" name="last_name" required="" value="">
+									<input type="text" class="form-control" placeholder="Your WhatsApp Contact Number" name="wp" required="" value="" />
 								</div>
 								<p class="text-danger er-msg d-none">Please Verify Captcha.</p>
 								<p class="text-danger er-msg d-none">Invalid Message.</p>
