@@ -132,7 +132,45 @@ class FilterGrid extends React.Component {
 			</div>
 		</div>
 		</section>
-		
+		<section className="about-us-section-1  bg-white">
+		<div class="container">
+			<div class="main-panel">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="section-heading">{post.contactUsTitle}</h2>
+						<div class="label-text" dangerouslySetInnerHTML={{ __html: post.contactUsDesc }} 
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
+		<section className="about-us-section-1  bg-white">
+			<div class="container">
+				<form method="POST" id="form" action="">
+					<div class="row justify-content-center">
+						<div class="col-lg-8 col-md-10">
+							<div class="row">
+								<div class="col-md-6 mb-4">
+									<label class="label-text">Email</label>
+									<input type="email" class="form-control" placeholder="Your Email Address" name="email" required="" value="">
+								</div>
+								<div class="col-md-6 mb-4">
+									<label class="label-text">WhatsApp</label>
+									<input type="text" class="form-control" placeholder="Your WhatsApp Contact Number" name="last_name" required="" value="">
+								</div>
+								<p class="text-danger er-msg d-none">Please Verify Captcha.</p>
+								<p class="text-danger er-msg d-none">Invalid Message.</p>
+								<p class="text-danger er-msg d-none">First name last name are must be different.</p>
+								<div class="col-md-12  mb-4 ">
+									<button type="button" id="acone1" class="btn-default border-0 btn-sub" value="Submit">Submit</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
 		
 	</Layout>
     )
@@ -166,6 +204,8 @@ const WC = () => (
 					  servicesDesc
 					  servicesTitle
 					  packagesTitle
+					  contactUsDesc
+					  contactUsTitle
 					  packages {
 						packagesTitle
 						rows {
@@ -187,4 +227,5 @@ const WC = () => (
 )
 
 export default WC
+
 
