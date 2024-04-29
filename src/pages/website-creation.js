@@ -6,17 +6,82 @@ import Particles from "react-tsparticles";
 import Layout from '../components/Layout'
 import ReactWOW from 'react-wow'
 import Helmet from 'react-helmet'
+import SimpleReactValidator from 'simple-react-validator';
+import ReCAPTCHA from "react-google-recaptcha";
+import axios from 'axios';
+import Cookies from 'universal-cookie';
 class FilterGrid extends React.Component {
   constructor(props) {
     super(props);
-   
+    this.validator = new SimpleReactValidator();
+	this.state = {
+          email: '',
+          number: '',
+		  shown: "d-none",
+		  shown_new: "d-none",
+		  shown_captcha: "d-none"
+		}
+	this.submitForm = this.submitForm.bind(this);
+	  this.email = this.email.bind(this);
+	  this.number = this.number.bind(this);
   }
   
-  componentDidMount() {
+	componentDidMount() {
     
-  }
+	}
 
- 
+	email(e) {
+		this.setState({
+			email: e.target.value
+		});
+	}
+
+	number(e) {
+		this.setState({
+			number: e.target.value
+		});
+	}
+	submitForm() {
+	  if (this.validator.allValid()) {
+		  
+		  const recaptchaValue = recaptchaRef.current.getValue();
+		
+		if(recaptchaValue == ''){
+			
+			this.setState({shown_captcha: "d-block"});
+			setTimeout(
+				function() {
+					this.setState({shown_captcha: "d-none"});
+				}
+			.bind(this),
+				2000
+			);
+			
+			
+			return false;
+		}
+		 axios({
+			  method: 'post',
+			  url: 'https://steamlinedesign.com/qltech/formbucket/',
+			  data: payload, // you are sending body instead
+			  headers: {
+			   // 'Authorization': `bearer ${token}`,
+			  'Content-Type': 'multipart/form-data'
+			  }, 
+			}).then(function(response) {
+			window.location.href = "https://www.qltech.com.au/thank-you/";
+		    });	 
+		  
+	}
+	else {
+		this.validator.showMessages();
+		// rerender to show messages for the first time
+		// you can use the autoForceUpdate option to do this automatically`
+		this.forceUpdate();
+	  }
+	}
+	
+	
 
   render() {
     
@@ -137,8 +202,8 @@ class FilterGrid extends React.Component {
 			<div class="main-panel">
 				<div class="row">
 					<div class="col-12">
-						<h2 class="section-heading section-heading-2 text-center mb-2">{post.contactUsTitle}</h2>
-						<div class="label-text text-center mb-2" dangerouslySetInnerHTML={{ __html: post.contactUsDesc }} 
+						<h2 class="section-heading">{post.contactUsTitle}</h2>
+						<div class="label-text" dangerouslySetInnerHTML={{ __html: post.contactUsDesc }} 
 						/>
 					</div>
 				</div>
@@ -153,17 +218,23 @@ class FilterGrid extends React.Component {
 							<div class="row">
 								<div class="col-md-6 mb-4">
 									<label class="label-text">Email</label>
-									<input type="email" class="form-control" placeholder="Your Email Address" name="email" required="" value="" />
+									<input type="email" class="form-control" value={this.state.email} onChange={this.email} placeholder="Your Email Address" name="email"  value="" required/>
+									{this.validator.message('Email', this.state.email, 'required|email')}
 								</div>
 								<div class="col-md-6 mb-4">
 									<label class="label-text">WhatsApp</label>
-									<input type="text" class="form-control" placeholder="Your WhatsApp Contact Number" name="wp" required="" value="" />
+									<input type="text" value={this.state.number} onChange={this.number} class="form-control" placeholder="Your WhatsApp Contact Number" name="number" required="" value="" required/>
+									{this.validator.message('Contact Number', this.state.number, 'required|numeric|min:10|max:10')}
 								</div>
-								<p class="text-danger er-msg d-none">Please Verify Captcha.</p>
-								<p class="text-danger er-msg d-none">Invalid Message.</p>
-								<p class="text-danger er-msg d-none">First name last name are must be different.</p>
+								<div className="col-md-12 mt-3">
+											<ReCAPTCHA
+												ref={recaptchaRef}
+												sitekey=" 6Lc5jjEUAAAAAI1yf3CfFogxqiok5pt7wcF7_SKJ"
+											/>
+										</div>
+								<p className={"text-danger er-msg "+this.state.shown_captcha} >Please Verify Captcha.</p>
 								<div class="col-md-12  mb-4 ">
-									<button type="button" id="acone1" class="btn-default border-0 btn-sub" value="Submit">Submit</button>
+									<button type="button" onClick={this.submitForm} id="acone1" className="btn-default border-0 btn-sub" value="Submit">Submit</button>
 								</div>
 							</div>
 						</div>
