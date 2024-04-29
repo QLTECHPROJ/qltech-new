@@ -11,7 +11,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import axios from 'axios';
 import Cookies from 'universal-cookie';
 const recaptchaRef = React.createRef();
-import webcontact from '../components/Contact/webcontact'
+import Webcontact from '../components/Contact/Webcontact'
 class FilterGrid extends React.Component {
   constructor(props) {
     super(props);
@@ -214,7 +214,7 @@ class FilterGrid extends React.Component {
 		</section>
 		<section className="about-us-section-1  bg-white">
 			<div class="container">
-			<webcontact />
+			<Webcontact />
 			</div>
 		</section>
 		
