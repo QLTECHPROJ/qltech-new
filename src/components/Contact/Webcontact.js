@@ -62,20 +62,6 @@ class Webcontact extends React.Component{
 	  if (this.validator.allValid()) {
 		  
 		
-		var fnew = this.state.first_name.slice(0, 5);  
-		var lnew = this.state.last_name.slice(0, 5);  
-		
-		if(fnew == lnew){
-			this.setState({shown_new: "d-block"});
-			setTimeout(
-				function() {
-					this.setState({shown_new: "d-none"});
-				}
-			.bind(this),
-				2000
-			);
-			return false;
-		}
 		
 		const recaptchaValue = recaptchaRef.current.getValue();
 		
@@ -93,60 +79,7 @@ class Webcontact extends React.Component{
 			
 			return false;
 		}
-		
 
-		var myarr = ["free", "downloads", "offers", "DA", "PA", "affordable price", "clients", "Some example", "services", "giveaways", "goal", "example", "test", "Marketing", "traffic", "offers","Bitcoin", "ervaringen", "review", "Capsules", "Amoxicillin", "blogger", "supplier", "SEO", "backlinks", "Digital", "Marketing", "link builder", "domain authority", "Off–Page",  "Title Tag Optimization", "Meta Tag Optimization", "keyword", "SERPs"];
-		
-		
-		
-		var flag = 0;
-		for(let i = 0; i < myarr.length; i++){
-			if(new RegExp('\\b'+ myarr[i] +'\\b','gi').test(this.state.goal) == true){
-				flag = 1;
-			}
-		}	
-		if(flag == 1){
-			this.setState({shown: "d-block"});
-			setTimeout(
-				function() {
-					this.setState({shown: "d-none"});
-				}
-			.bind(this),
-				2000
-			);
-		}
-		else{
-			init("30c4c799e1eda5b6cfe2d675f3b9e12e");
-			
-			const identifyObj = new Identify();
-identifyObj.set('firstName', this.state.first_name);
-			identifyObj.set('lastName', this.state.last_name);
-			identifyObj.set('email', this.state.email);
-			identifyObj.set('contactNumber', this.state.number);
-			identifyObj.set('goal', this.state.goal);
-identify(identifyObj);
-			
-			
-			const eventProperties = {
-			  firstName: this.state.first_name,
-			lastName: this.state.last_name,
-				email: this.state.email,
-				contactNumber: this.state.number,
-				goal: this.state.goal,
-
-			};
-			console.log(eventProperties);
-			track('Contact Us Form Filled', eventProperties);
-			const payload = {
-			  first_name: this.state.first_name,
-			  last_name: this.state.last_name,
-			  email: this.state.email,	
-				number: this.state.number,
-				goal: this.state.goal,
-				url: window.location.href,
-			  	form_name: 'Contact-us',
-			 
-			}
 
 			axios({
 			  method: 'post',
@@ -159,7 +92,7 @@ identify(identifyObj);
 			}).then(function(response) {
 			window.location.href = "https://www.qltech.com.au/thank-you/";
 		    });	
-		}	
+			
 		
 		//document.getElementById('form').submit()
 	  } else {
@@ -173,22 +106,13 @@ identify(identifyObj);
   render (){
     return(
       <>
-      <form method="POST" id="form" action="https://script.google.com/macros/s/AKfycbzteG10RHf7D6zzRQeJJHjBXRE6q4No1v96sBL3oYNI63P80DNHLjLZsEH20IicRNGAYA/exec"  >
+      <form method="POST" id="form" action=""  >
 	  
 	  
 							<div className="row justify-content-center">
 								<div className="col-lg-8 col-md-10">
 									 <div className="row">
-										<div className="col-md-6 mb-4">
-											<label className="label-text">First Name</label>
-											<input type="text" className="form-control" placeholder=""  name="first_name" value={this.state.first_name} onChange={this.setTitle}  required/>
-											{this.validator.message('First Name', this.state.first_name, 'required|alpha')}
-										</div>
-										<div className="col-md-6 mb-4">
-											<label className="label-text">Last Name</label>
-											<input type="text" className="form-control" placeholder=""  name="last_name" value={this.state.last_name} onChange={this.setln} required/>
-											{this.validator.message('Last Name', this.state.last_name, 'required|alpha')}
-										</div>
+										
 										<div className="col-md-12 mb-4">
 											<label className="label-text">Email</label>
 											<input type="email" className="form-control" value={this.state.email} onChange={this.email} placeholder="" name="email" required/>
@@ -199,10 +123,7 @@ identify(identifyObj);
 											<input type="text"  value={this.state.number} onChange={this.number} className="form-control" placeholder="" name="number" required/>
 											{this.validator.message('Contact Number', this.state.number, 'required|numeric|min:10|max:10')}
 										</div>
-										<div className="col-md-12">
-											<label className="label-text">Your Goal</label>
-											<textarea rows="3" onChange={this.goal} className="form-control" placeholder="" name="message" required>{this.state.goal}</textarea>
-										</div>
+										
 										
 										<div className="col-md-12 mt-3">
 											<ReCAPTCHA
