@@ -127,33 +127,6 @@ class FilterGrid extends React.Component {
 			<div class="main-panel">
 				<div class="row">
 					<div class="col-12">
-						<h2 class="section-heading">{post.title}</h2>
-						<div class="label-text" dangerouslySetInnerHTML={{ __html: post.description }} 
-						/>
-					</div>
-				</div>
-			</div>
-		</div>
-		</section>
-		<section className="about-us-section-1  bg-white">
-		<div class="container">
-			<div class="main-panel">
-				<div class="row">
-					<div class="col-12">
-						<h2 class="section-heading">{post.servicesTitle}</h2>
-						<div class="label-text" dangerouslySetInnerHTML={{ __html: post.servicesDesc }} 
-						/>
-					</div>
-				</div>
-			</div>
-		</div>
-		</section>
-		
-		<section className="about-us-section-1  bg-white">
-		<div class="container">
-			<div class="main-panel">
-				<div class="row">
-					<div class="col-12">
 						<h2 class="section-heading">{post.packagesTitle}</h2>
 						
 					</div>
@@ -199,6 +172,34 @@ class FilterGrid extends React.Component {
 			</div>
 		</div>
 		</section>
+		<section className="about-us-section-1  bg-white">
+		<div class="container">
+			<div class="main-panel">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="section-heading">{post.title}</h2>
+						<div class="label-text" dangerouslySetInnerHTML={{ __html: post.description }} 
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
+		<section className="about-us-section-1  bg-white">
+		<div class="container">
+			<div class="main-panel">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="section-heading">{post.servicesTitle}</h2>
+						<div class="label-text" dangerouslySetInnerHTML={{ __html: post.servicesDesc }} 
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
+		
+		
 		<section className="about-us-section-1  bg-white">
 		<div class="container">
 			<div class="main-panel">
