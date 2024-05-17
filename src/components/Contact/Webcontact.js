@@ -93,7 +93,7 @@ const payload = {
 			  data: payload, // you are sending body instead
 			 
 			}).then(function(response) {
-				console.log(response);
+				console.log(response.data);
 				console.log(response.ResponseCode);
 				if(response.ResponseCode == 200){
 					window.location.href = "https://www.qltech.com.au/thank-you/";
