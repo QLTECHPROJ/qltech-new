@@ -204,7 +204,7 @@ class FilterGrid extends React.Component {
 			<div class="main-panel">
 				<div class="row">
 					<div class="col-12">
-							<p>Feel free to contact us directly on </p>																														       <><>
+						<p>Feel free to contact us on </p>
 						<h3> <b>Email :</b><a href="mailto:sales@qltech.com.au" >sales@qltech.com.au</a></h3>
 						<h3> <b>Phone :</b> +971 58 218 0054 (UAE)</h3>																															       
 					</div>
