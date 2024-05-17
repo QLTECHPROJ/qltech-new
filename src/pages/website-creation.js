@@ -199,19 +199,7 @@ class FilterGrid extends React.Component {
 		</div>
 		</section>
 		
-		<section className="about-us-section-1  bg-white">
-		<div class="container">
-			<div class="main-panel">
-				<div class="row">
-					<div class="col-12">
-						<p>Feel free to contact us on </p>
-						<h3> <b>Email :</b><a href="mailto:sales@qltech.com.au" >sales@qltech.com.au</a></h3>
-						<h3> <b>Phone :</b> +971 58 218 0054 (UAE)</h3>																															       
-					</div>
-				</div>
-			</div>
-		</div>
-		</section>
+		
 		<section className="about-us-section-1  bg-white">
 		<div class="container">
 			<div class="main-panel">
@@ -225,7 +213,19 @@ class FilterGrid extends React.Component {
 			</div>
 		</div>
 		</section>
-																																		     
+			<section className="about-us-section-1  bg-white">
+		<div class="container">
+			<div class="main-panel">
+				<div class="row">
+					<div class="col-12">
+						<p>Feel free to contact us on </p>
+						<h4> <b>Email :</b><a href="mailto:sales@qltech.com.au" >sales@qltech.com.au</a></h4>
+						<h4> <b>Phone :</b> +971 58 218 0054 (UAE)</h4>																															       
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>																															     
 		<section className="about-us-section-1  bg-white">
 			<div class="container">
 			<Webcontact />
