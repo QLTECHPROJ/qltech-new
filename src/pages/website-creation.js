@@ -127,7 +127,7 @@ class FilterGrid extends React.Component {
 			<div class="main-panel">
 				<div class="row">
 					<div class="col-12">
-						<h2 class="section-heading">{post.packagesTitle}</h2>
+						<h2 class="section-heading text-center mb-5">{post.packagesTitle}</h2>
 						
 					</div>
 					<div class="col-12">
@@ -177,7 +177,7 @@ class FilterGrid extends React.Component {
 			<div class="main-panel">
 				<div class="row">
 					<div class="col-12">
-						<h2 class="section-heading">{post.title}</h2>
+						<h2 class="section-heading text-center mb-5">{post.title}</h2>
 						<div class="label-text" dangerouslySetInnerHTML={{ __html: post.description }} 
 						/>
 					</div>
@@ -190,7 +190,7 @@ class FilterGrid extends React.Component {
 			<div class="main-panel">
 				<div class="row">
 					<div class="col-12">
-						<h2 class="section-heading">{post.servicesTitle}</h2>
+						<h2 class="section-heading text-center mb-5">{post.servicesTitle}</h2>
 						<div class="label-text" dangerouslySetInnerHTML={{ __html: post.servicesDesc }} 
 						/>
 					</div>
@@ -205,7 +205,7 @@ class FilterGrid extends React.Component {
 			<div class="main-panel">
 				<div class="row">
 					<div class="col-12">
-						<h2 class="section-heading">{post.contactUsTitle}</h2>
+						<h2 class="section-heading text-center mb-5">{post.contactUsTitle}</h2>
 						<div class="label-text" dangerouslySetInnerHTML={{ __html: post.contactUsDesc }} 
 						/>
 					</div>
