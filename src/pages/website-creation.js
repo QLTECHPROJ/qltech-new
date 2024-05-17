@@ -255,6 +255,7 @@ const WC = () => (
 					  contactUsTitle
 					  packages {
 						packagesTitle
+      						price
 						rows {
 						  text
 						}
