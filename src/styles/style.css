@@ -15,7 +15,10 @@
   border: 1px solid #00b5ec;
   margin-bottom: 45px;
 }
-
+.pric{
+	font-size: 25px;
+  margin-top: 30px;
+}
 @media (min-width: 768px) {
   .price-tabs {
     margin-bottom: 60px;
