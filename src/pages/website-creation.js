@@ -141,7 +141,7 @@ class FilterGrid extends React.Component {
 											<div class="price-item text-center">
 												<div class="price-top">
 													<h4>{prop.packagesTitle}</h4>
-													<h2 class="mb-0"><sup>$</sup>99</h2> <span class="text-capitalize">per year</span></div>
+													<h2 class="mb-0">{prop.price}</h2> </div>
 												<div class="price-content">
 													<ul class="border-bottom mb-30 mt-md-4 pb-3 text-left">
 													{prop.rows && prop.rows.map(
