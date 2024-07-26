@@ -266,7 +266,7 @@ const WC = () => (
 					  packagesTitle
 					  contactUsDesc
 					  contactUsTitle
-       					  industries_we_serve
+       					  industriesWeServe
 	      					industries{
 	    						icon{
 			                                 sourceUrl
