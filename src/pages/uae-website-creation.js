@@ -271,7 +271,7 @@ const WC = () => (
 	    						icon{
 			                                 sourceUrl
 			                              	}
-	   						ind_text
+	   						indText
 						}
 					  packages {
 						packagesTitle
