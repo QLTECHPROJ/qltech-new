@@ -266,6 +266,13 @@ const WC = () => (
 					  packagesTitle
 					  contactUsDesc
 					  contactUsTitle
+       					  industries_we_serve
+	      					industries{
+	    						icon{
+			                                 sourceUrl
+			                              	}
+	   						ind_text
+						}
 					  packages {
 						packagesTitle
       						price
