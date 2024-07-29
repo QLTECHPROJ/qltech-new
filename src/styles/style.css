@@ -4,6 +4,12 @@
 @import url('./flaticon.css');
 
 /*=== UAE ===*/
+.icn_box{
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
 .icn_img{
     width: 100px;
 }
