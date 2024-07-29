@@ -213,7 +213,7 @@ class FilterGrid extends React.Component {
 									return (
 									<>
 										
-									<div class="col-2">
+									<div class="col-2 pad20">
 										<div class="icn_box">
 										<img src={prop.icon.sourceUrl} class="icn_img" />
 										<p>{prop.indText}</p>
