@@ -212,10 +212,12 @@ class FilterGrid extends React.Component {
 								(prop,i) => {
 									return (
 									<>
-									<div class="col-3">
+										<div class="icn_box">
+									<div class="col-2">
 										<img src={prop.icon.sourceUrl} class="icn_img" />
 										<p>{prop.indText}</p>
 									</div>
+						</div>
 									</>
 					)
 								}
