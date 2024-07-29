@@ -198,7 +198,32 @@ class FilterGrid extends React.Component {
 			</div>
 		</div>
 		</section>
-		
+		<section className="about-us-section-1  bg-white">
+		<div class="container">
+			<div class="main-panel">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="section-heading text-center mb-5">{post.industriesWeServe}</h2>
+						
+					</div>
+				</div>
+				<div class="row">
+					{post.industries && post.industries.map(
+								(prop,i) => {
+									return (
+									<>
+									<div class="col-3">
+										<img src={prop.icon.sourceUrl} class="icn_img" />
+										<p>{prop.indText}</p>
+									</div>
+									</>
+					)
+								}
+							)}				
+				</div>
+			</div>
+		</div>
+		</section>
 		
 		<section className="about-us-section-1  bg-white">
 		<div class="container">
