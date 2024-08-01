@@ -152,7 +152,9 @@ class FilterGrid extends React.Component {
 																		)
 												}
 											)}
-													</ul> </div>
+													</ul> 
+													<a href="" tagrget="_blank" class="btn-default border-0 btn-sub" >Select Plan</a>
+													</div>
 											</div>
 										</div>
 										</>	
@@ -173,6 +175,19 @@ class FilterGrid extends React.Component {
 		</div>
 		</section>
 		<section className="about-us-section-1  bg-white">
+		<div class="container">
+			<div class="main-panel">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="section-heading text-center mb-5">Why Choose QL Tech?</h2>
+						<div class="label-text" dangerouslySetInnerHTML={{ __html: post.whyQltech }} 
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
+																																														<section className="about-us-section-1  bg-white">
 		<div class="container">
 			<div class="main-panel">
 				<div class="row">
@@ -294,6 +309,7 @@ const WC = () => (
 					  packagesTitle
 					  contactUsDesc
 					  contactUsTitle
+       						whyQltech
        					  industriesWeServe
 	      					industries{
 	    						icon{
