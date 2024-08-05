@@ -406,7 +406,7 @@ class FilterGrid extends React.Component {
 											<label className="label-text">Company Size</label>
 											<select className="form-control"  >
 											<option value="">Select Company Size</option>
-											<option value="<5"> < 5</option>
+											<option value="Less than 5"> Less than 5</option>
 											<option value="10-20">  10-20</option>
 											<option value="20-50">  20-50</option>
 											<option value="Less than 50">  Less than 50 </option>
