@@ -347,7 +347,7 @@ class FilterGrid extends React.Component {
         onRequestClose={this.handleModalClose}
           className="modal d-block fade testimonial-view show"
       >
-          <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div className="modal-dialog modal-dialog-centered" role="document">
         <div className="modal-content ">
             <button type="button" className="close btn-default" onClick={this.handleModalClose} data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -361,7 +361,7 @@ class FilterGrid extends React.Component {
 	  
 	  
 							<div className="row justify-content-center">
-								<div className="col-lg-8 col-md-10">
+								<div className="col-lg-12 col-md-12">
 									 <div className="row">
 									 <div className="col-md-12 mb-4">
 											
