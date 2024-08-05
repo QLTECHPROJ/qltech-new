@@ -167,7 +167,7 @@ class FilterGrid extends React.Component {
 												}
 											)}
 													</ul> 
-													<a href="javascript:;" onClick={() => this.handleModalOpen(k)} class="btn-default border-0 btn-sub" >Select Plan</a>
+													<a href="javascript:;" onClick={() => this.handleModalOpen(i)} class="btn-default border-0 btn-sub" >Select Plan</a>
 													</div>
 											</div>
 										</div>
