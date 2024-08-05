@@ -28,11 +28,19 @@ class FilterGrid extends React.Component {
 		  shown_captcha: "d-none",
 		  isModalOpen: false,
 		  plan: 0,
+		  goal: '',
+		  cs: '',
+		  indus: '',
+		 cn: ''
 		  
 		}
-	this.submitForm = this.submitForm.bind(this);
+		this.submitForm = this.submitForm.bind(this);
 	  this.email = this.email.bind(this);
 	  this.number = this.number.bind(this);
+	  this.goal = this.goal.bind(this);
+	  this.cs = this.cs.bind(this);
+	  this.indus = this.indus.bind(this);
+	  this.cn = this.cn.bind(this);
   }
   
   handleModalOpen = (i) => {
@@ -60,6 +68,33 @@ class FilterGrid extends React.Component {
 			number: e.target.value
 		});
 	}
+	
+	goal(e) {
+		this.setState({
+			goal: e.target.value
+		});
+	}
+	
+	cs(e) {
+		this.setState({
+			cs: e.target.value
+		});
+	}
+	
+	indus(e) {
+		this.setState({
+			indus: e.target.value
+		});
+	}
+	
+	cn(e) {
+		this.setState({
+			cn: e.target.value
+		});
+	}
+	
+	
+	
 	submitForm() {
 	  if (this.validator.allValid()) {
 		  
@@ -79,17 +114,33 @@ class FilterGrid extends React.Component {
 			
 			return false;
 		}
-		 axios({
+		const payload = {
+			email: this.state.email,	
+			number: this.state.number,
+			plan: this.state.plan,
+			cn: this.state.cn,
+			indus: this.state.indus,
+			cs: this.state.cs,
+			goal: this.state.goal,
+		}
+
+			axios({
 			  method: 'post',
-			  url: 'https://steamlinedesign.com/qltech/formbucket/',
+			  url: 'https://admin.qltech.com.au/wp-json/new_ql/v1/mail_web',
 			  data: payload, // you are sending body instead
-			  headers: {
-			   // 'Authorization': `bearer ${token}`,
-			  'Content-Type': 'multipart/form-data'
-			  }, 
+			 
 			}).then(function(response) {
-			window.location.href = "https://www.qltech.com.au/thank-you/";
-		    });	 
+				
+				if(response.data.ResponseCode == 200){
+					window.location.href = "https://www.qltech.com.au/thank-you/";
+				}
+				else{
+					alert(response.ResponseMsg);
+					return false;
+				}
+			
+		    });	
+			
 		  
 	}
 	else {
@@ -303,25 +354,88 @@ class FilterGrid extends React.Component {
             </button>
       
           <div className="modal-body p-0">
-          <div className="embed-responsive embed-responsive-16by9">
+         
                  <form method="POST" id="form" action=""  >
 	  
 	  
 							<div className="row justify-content-center">
 								<div className="col-lg-8 col-md-10">
 									 <div className="row">
+										<div className="col-md-12 mb-4">
+											<label className="label-text">Company Name</label>
+											<input type="hidden" className="form-control" value={this.state.plan} onChange={this.plan} placeholder="" name="plan" required/>
+											
+										</div>
+										
 										
 										<div className="col-md-12 mb-4">
-											<label className="label-text">Email</label>
+											<label className="label-text">Company Name</label>
+											<input type="email" className="form-control" value={this.state.cn} onChange={this.cn} placeholder="" name="email" required/>
+											{this.validator.message('Email', this.state.cn, 'required|email')}
+										</div>
+										
+										<div className="col-md-12 mb-4">
+											<label className="label-text">Industry</label>
+											<select className="form-control" onChange={this.indus} >
+											<option value="">Select Industry</option>
+											<option value="Information Technology">Information Technology</option>
+											<option value="Healthcare">Healthcare</option>
+											<option value="Finance">Finance</option>
+											<option value="Education">Education</option>
+											<option value="Retail">Retail</option>
+											<option value="Menufacturing">Menufacturing</option>
+											<option value="Logistics and Transportation">Logistics and Transportation</option>
+											<option value="Real Esatte">Real Esatte</option>
+											<option value="Media & Entertainment">Media & Entertainment</option>
+											<option value="Energy">Energy</option>
+											<option value="Telecommunications">Telecommunications</option>
+											<option value="Agriculture">Agriculture</option>
+											<option value="Goverment">Goverment</option>
+											<option value="Mining">Mining</option>
+											<option value="Space">Space</option>
+											<option value="Automotive">Automotive</option>
+											<option value="Legal">Legal</option>
+											<option value="Construction">Construction</option>
+											<option value="Other">Other</option>
+											
+											</select>
+											{this.validator.message('Industry', this.state.indus, 'required')}
+										</div>
+										
+										<div className="col-md-12 mb-4">
+											<label className="label-text">Company Size</label>
+											<select className="form-control" onChange={this.cs} >
+											<option value="">Select Company Size</option>
+											<option value="<5"> < 5</option>
+											<option value="10-20">  10-20</option>
+											<option value="20-50">  20-50</option>
+											<option value="<50">  <50</option>
+											<option value="50-100">  50-100</option>
+											<option value="<100">  <100</option>
+										
+											
+											</select>
+											{this.validator.message('Company Size', this.state.cs, 'required')}
+										</div>
+										
+										
+										<div className="col-md-12 mb-4">
+											<label className="label-text">Company Email</label>
 											<input type="email" className="form-control" value={this.state.email} onChange={this.email} placeholder="" name="email" required/>
 											{this.validator.message('Email', this.state.email, 'required|email')}
 										</div>
+										
+										
+										
 										<div className="col-md-12 mb-4">
-											<label className="label-text">Contact Number</label>
+											<label className="label-text">Company Contact Number</label>
 											<input type="text"  value={this.state.number} onChange={this.number} className="form-control" placeholder="" name="number" required/>
 											{this.validator.message('Contact Number', this.state.number, 'required|numeric|min:10|max:10')}
 										</div>
-										
+										<div className="col-md-12">
+											<label className="label-text">Your Goal</label>
+											<textarea rows="3" onChange={this.goal} className="form-control" placeholder="" name="message" required>{this.state.goal}</textarea>
+										</div>
 										
 										<div className="col-md-12 mt-3">
 											<ReCAPTCHA
@@ -333,10 +447,7 @@ class FilterGrid extends React.Component {
 										
 										<p className={"text-danger er-msg "+this.state.shown_captcha} >Please Verify Captcha.</p>
 										
-										<input type="hidden" required className="form-control" name="url" value="/contact-us" />
-										<input type="hidden" required className="form-control" name="form_name" value="Contact-us" />
-										<p  className={"text-danger er-msg "+this.state.shown} >Invalid Message.</p>
-										<p  className={"text-danger er-msg "+this.state.shown_new} >First name last name are must be different.</p>
+										
 										<div className="col-md-12  mb-4 ">
 										<button type="button" onClick={this.submitForm} id="acone1" className="btn-default border-0 btn-sub" value="Submit">Submit</button>
 											
@@ -346,7 +457,7 @@ class FilterGrid extends React.Component {
 							</div>
 						   
 						</form>
-            </div>
+            
               
           </div>
         
