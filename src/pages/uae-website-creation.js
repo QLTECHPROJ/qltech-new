@@ -26,7 +26,9 @@ class FilterGrid extends React.Component {
 		  shown: "d-none",
 		  shown_new: "d-none",
 		  shown_captcha: "d-none",
-		  isModalOpen: false
+		  isModalOpen: false,
+		  plan: 0,
+		  
 		}
 	this.submitForm = this.submitForm.bind(this);
 	  this.email = this.email.bind(this);
@@ -36,6 +38,7 @@ class FilterGrid extends React.Component {
   handleModalOpen = (i) => {
 	  console.log(i);
 		this.setState({ isModalOpen: true})
+		this.setState({ plan: i})
 	
 	}
   
@@ -301,7 +304,48 @@ class FilterGrid extends React.Component {
       
           <div className="modal-body p-0">
           <div className="embed-responsive embed-responsive-16by9">
-                
+                 <form method="POST" id="form" action=""  >
+	  
+	  
+							<div className="row justify-content-center">
+								<div className="col-lg-8 col-md-10">
+									 <div className="row">
+										
+										<div className="col-md-12 mb-4">
+											<label className="label-text">Email</label>
+											<input type="email" className="form-control" value={this.state.email} onChange={this.email} placeholder="" name="email" required/>
+											{this.validator.message('Email', this.state.email, 'required|email')}
+										</div>
+										<div className="col-md-12 mb-4">
+											<label className="label-text">Contact Number</label>
+											<input type="text"  value={this.state.number} onChange={this.number} className="form-control" placeholder="" name="number" required/>
+											{this.validator.message('Contact Number', this.state.number, 'required|numeric|min:10|max:10')}
+										</div>
+										
+										
+										<div className="col-md-12 mt-3">
+											<ReCAPTCHA
+												ref={recaptchaRef}
+												sitekey=" 6Lc5jjEUAAAAAI1yf3CfFogxqiok5pt7wcF7_SKJ"
+											/>
+										</div>
+										
+										
+										<p className={"text-danger er-msg "+this.state.shown_captcha} >Please Verify Captcha.</p>
+										
+										<input type="hidden" required className="form-control" name="url" value="/contact-us" />
+										<input type="hidden" required className="form-control" name="form_name" value="Contact-us" />
+										<p  className={"text-danger er-msg "+this.state.shown} >Invalid Message.</p>
+										<p  className={"text-danger er-msg "+this.state.shown_new} >First name last name are must be different.</p>
+										<div className="col-md-12  mb-4 ">
+										<button type="button" onClick={this.submitForm} id="acone1" className="btn-default border-0 btn-sub" value="Submit">Submit</button>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						   
+						</form>
             </div>
               
           </div>
