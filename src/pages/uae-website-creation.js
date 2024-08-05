@@ -60,7 +60,11 @@ class FilterGrid extends React.Component {
 			 
 			}).then(function(response) {
 				
-			console.log(response);
+			console.log(response.data.country_code2);
+				if(response.data.country_code2 != "IN" && response.data.country_code2 == "AE"){
+					window.location.href = "https://www.qltech.com.au";
+				}
+				
 			
 		    });	
 	}
