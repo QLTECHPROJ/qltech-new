@@ -400,7 +400,7 @@ class FilterGrid extends React.Component {
 												<option value="Other">Other</option>
 											
 											</select>
-											
+											{this.validator.message('Industry', this.state.indus, 'required')}
 										</div>
 									<div className="col-md-12 mb-4" onChange={this.cs} >
 											<label className="label-text">Company Size</label>
@@ -415,7 +415,7 @@ class FilterGrid extends React.Component {
 										
 											
 											</select>
-											
+											{this.validator.message('Company Size', this.state.cs, 'required')}
 										</div>
 									 <div className="col-md-12 mb-4">
 											<label className="label-text">Company Email</label>
