@@ -402,7 +402,21 @@ class FilterGrid extends React.Component {
 											</select>
 											
 										</div>
-									
+									<div className="col-md-12 mb-4">
+											<label className="label-text">Company Size</label>
+											<select className="form-control"  >
+											<option value="">Select Company Size</option>
+											<option value="<5"> < 5</option>
+											<option value="10-20">  10-20</option>
+											<option value="20-50">  20-50</option>
+											<option value="Less than 50">  Less than 50 </option>
+											<option value="50-100">  50-100</option>
+											<option value="Less than 100"> Less than 100</option>
+										
+											
+											</select>
+											
+										</div>
 									 <div className="col-md-12 mb-4">
 											<label className="label-text">Company Email</label>
 											<input type="email" className="form-control" value={this.state.email} onChange={this.email} placeholder="" name="email" required/>
