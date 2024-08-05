@@ -364,7 +364,7 @@ class FilterGrid extends React.Component {
 								<div className="col-lg-8 col-md-10">
 									 <div className="row">
 									 <div className="col-md-12 mb-4">
-											<label className="label-text">Company Name</label>
+											
 											<input type="hidden" className="form-control" value={this.state.plan} onChange={this.plan} placeholder="" name="plan" required/>
 											
 										</div>
