@@ -375,48 +375,8 @@ class FilterGrid extends React.Component {
 											<input type="email" className="form-control" value={this.state.cn} onChange={this.cn} placeholder="" name="email" required/>
 											{this.validator.message('Email', this.state.cn, 'required|email')}
 										</div>
-									 <div className="col-md-12 mb-4">
-											<label className="label-text">Industry</label>
-											<select className="form-control" >
-											<option value="">Select Industry</option>
-											<option value="Information Technology">Information Technology</option>
-											<option value="Healthcare">Healthcare</option>
-											<option value="Finance">Finance</option>
-											<option value="Education">Education</option>
-											<option value="Retail">Retail</option>
-											<option value="Menufacturing">Menufacturing</option>
-											<option value="Logistics and Transportation">Logistics and Transportation</option>
-											<option value="Real Esatte">Real Esatte</option>
-											<option value="Media & Entertainment">Media & Entertainment</option>
-											<option value="Energy">Energy</option>
-											<option value="Telecommunications">Telecommunications</option>
-											<option value="Agriculture">Agriculture</option>
-											<option value="Goverment">Goverment</option>
-											<option value="Mining">Mining</option>
-											<option value="Space">Space</option>
-											<option value="Automotive">Automotive</option>
-											<option value="Legal">Legal</option>
-											<option value="Construction">Construction</option>
-											<option value="Other">Other</option>
-											
-											</select>
-											
-										</div>
-									 <div className="col-md-12 mb-4">
-											<label className="label-text">Company Size</label>
-											<select className="form-control"  >
-											<option value="">Select Company Size</option>
-											<option value="<5"> < 5</option>
-											<option value="10-20">  10-20</option>
-											<option value="20-50">  20-50</option>
-											<option value="<50">  <50</option>
-											<option value="50-100">  50-100</option>
-											<option value="<100">  <100</option>
-										
-											
-											</select>
-											
-										</div>
+									 
+									
 									 <div className="col-md-12 mb-4">
 											<label className="label-text">Company Email</label>
 											<input type="email" className="form-control" value={this.state.email} onChange={this.email} placeholder="" name="email" required/>
