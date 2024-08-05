@@ -364,8 +364,47 @@ class FilterGrid extends React.Component {
 								<div className="col-lg-8 col-md-10">
 									 <div className="row">
 									 <div className="col-md-12 mb-4">
+											<label className="label-text">Company Name</label>
+											<input type="hidden" className="form-control" value={this.state.plan} onChange={this.plan} placeholder="" name="plan" required/>
+											
+										</div>
+										
+										
+										<div className="col-md-12 mb-4">
+											<label className="label-text">Company Name</label>
+											<input type="email" className="form-control" value={this.state.cn} onChange={this.cn} placeholder="" name="email" required/>
+											{this.validator.message('Email', this.state.cn, 'required|email')}
+										</div>
+									 <div className="col-md-12 mb-4">
+											<label className="label-text">Industry</label>
+											<select className="form-control" >
+											<option value="">Select Industry</option>
+											<option value="Information Technology">Information Technology</option>
+											<option value="Healthcare">Healthcare</option>
+											<option value="Finance">Finance</option>
+											<option value="Education">Education</option>
+											<option value="Retail">Retail</option>
+											<option value="Menufacturing">Menufacturing</option>
+											<option value="Logistics and Transportation">Logistics and Transportation</option>
+											<option value="Real Esatte">Real Esatte</option>
+											<option value="Media & Entertainment">Media & Entertainment</option>
+											<option value="Energy">Energy</option>
+											<option value="Telecommunications">Telecommunications</option>
+											<option value="Agriculture">Agriculture</option>
+											<option value="Goverment">Goverment</option>
+											<option value="Mining">Mining</option>
+											<option value="Space">Space</option>
+											<option value="Automotive">Automotive</option>
+											<option value="Legal">Legal</option>
+											<option value="Construction">Construction</option>
+											<option value="Other">Other</option>
+											
+											</select>
+											
+										</div>
+									 <div className="col-md-12 mb-4">
 											<label className="label-text">Company Size</label>
-											<select className="form-control" onChange={this.cs} >
+											<select className="form-control"  >
 											<option value="">Select Company Size</option>
 											<option value="<5"> < 5</option>
 											<option value="10-20">  10-20</option>
@@ -376,7 +415,7 @@ class FilterGrid extends React.Component {
 										
 											
 											</select>
-											{this.validator.message('Company Size', this.state.cs, 'required')}
+											
 										</div>
 									 <div className="col-md-12 mb-4">
 											<label className="label-text">Company Email</label>
