@@ -363,6 +363,22 @@ class FilterGrid extends React.Component {
 							<div className="row justify-content-center">
 								<div className="col-lg-8 col-md-10">
 									 <div className="row">
+									 
+									 <div className="col-md-12 mb-4">
+											<label className="label-text">Company Email</label>
+											<input type="email" className="form-control" value={this.state.email} onChange={this.email} placeholder="" name="email" required/>
+											{this.validator.message('Email', this.state.email, 'required|email')}
+										</div>
+										
+										
+										
+										<div className="col-md-12 mb-4">
+											<label className="label-text">Company Contact Number</label>
+											<input type="text"  value={this.state.number} onChange={this.number} className="form-control" placeholder="" name="number" required/>
+											{this.validator.message('Contact Number', this.state.number, 'required|numeric|min:10|max:10')}
+										</div>
+									 
+									 
 									 <div className="col-md-12">
 											<label className="label-text">Your Goal</label>
 											<textarea rows="3" onChange={this.goal} className="form-control" placeholder="" name="message" required>{this.state.goal}</textarea>
