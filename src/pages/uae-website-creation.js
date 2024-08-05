@@ -12,6 +12,10 @@ import axios from 'axios';
 import Cookies from 'universal-cookie';
 const recaptchaRef = React.createRef();
 import Webcontact from '../components/Contact/Webcontact'
+import ReactModal from 'react-modal'
+
+
+
 class FilterGrid extends React.Component {
   constructor(props) {
     super(props);
@@ -21,13 +25,23 @@ class FilterGrid extends React.Component {
           number: '',
 		  shown: "d-none",
 		  shown_new: "d-none",
-		  shown_captcha: "d-none"
+		  shown_captcha: "d-none",
+		  isModalOpen: false
 		}
 	this.submitForm = this.submitForm.bind(this);
 	  this.email = this.email.bind(this);
 	  this.number = this.number.bind(this);
   }
   
+  handleModalOpen = (i) => {
+	  console.log(i);
+		this.setState({ isModalOpen: true})
+	
+	}
+  
+	handleModalClose = event => {
+	this.setState({ isModalOpen: false })
+	}
 	componentDidMount() {
     
 	}
@@ -153,7 +167,7 @@ class FilterGrid extends React.Component {
 												}
 											)}
 													</ul> 
-													<a href="" tagrget="_blank" class="btn-default border-0 btn-sub" >Select Plan</a>
+													<a href="javascript:;" onClick={() => this.handleModalOpen(k)} class="btn-default border-0 btn-sub" >Select Plan</a>
 													</div>
 											</div>
 										</div>
@@ -274,7 +288,31 @@ class FilterGrid extends React.Component {
 			<Webcontact />
 			</div>
 		</section>
-		
+		<ReactModal  
+        isOpen={this.state.isModalOpen}
+        onRequestClose={this.handleModalClose}
+          className="modal d-block fade testimonial-view show"
+      >
+          <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div className="modal-content ">
+            <button type="button" className="close btn-default" onClick={this.handleModalClose} data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+      
+          <div className="modal-body p-0">
+          <div className="embed-responsive embed-responsive-16by9">
+                
+            </div>
+              
+          </div>
+        
+        </div>
+      </div>
+     
+        
+    
+    
+      </ReactModal>
 	</Layout>
     )
 	
