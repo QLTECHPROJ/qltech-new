@@ -54,7 +54,15 @@ class FilterGrid extends React.Component {
 	this.setState({ isModalOpen: false })
 	}
 	componentDidMount() {
-    
+			axios({
+			  method: 'get',
+			  url: 'https://api.ipgeolocation.io/ipgeo?apiKey=ae9d7dabf2cb4b6ebf45d7ea109c8ee4'
+			 
+			}).then(function(response) {
+				
+			console.log(response);
+			
+		    });	
 	}
 
 	email(e) {
