@@ -135,7 +135,7 @@ class FilterGrid extends React.Component {
 					window.location.href = "https://www.qltech.com.au/thank-you/";
 				}
 				else{
-					alert(response.ResponseMsg);
+					alert(response.data.ResponseMsg);
 					return false;
 				}
 			
@@ -377,7 +377,7 @@ class FilterGrid extends React.Component {
 										</div>
 									 <div className="col-md-12 mb-4">
 											<label className="label-text">Industry</label>
-											<select className="form-control" >
+											<select className="form-control" onChange={this.indus} >
 												<option value="">Select Industry</option>
 												<option value="Information Technology">Information Technology</option>
 												<option value="Healthcare">Healthcare</option>
@@ -402,7 +402,7 @@ class FilterGrid extends React.Component {
 											</select>
 											
 										</div>
-									<div className="col-md-12 mb-4">
+									<div className="col-md-12 mb-4" onChange={this.cs} >
 											<label className="label-text">Company Size</label>
 											<select className="form-control"  >
 											<option value="">Select Company Size</option>
