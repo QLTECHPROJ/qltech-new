@@ -177,14 +177,14 @@ class FilterGrid extends React.Component {
 	  	<Helmet>
 		<title>Your Premier Destination for Professional Website Creation- QL Tech</title>
 		<meta name="title" content="Our Work | Agile software & digital marketing company Perth, Australia- QL Tech"></meta>
-		<meta name="description" content="Our Clients speaks about Our works. QL Tech's web & digital marketing services team achieved for business numbers as yours. To know more, contact us @ +61 (0)8 6262 3559"></meta>
-		 <meta name="keywords" content="QL Tech works, Our works, Portfolio, QL tech portfolio, digital marketing works, Agile development, SEO services, case studies"></meta>
+		<meta name="description" content="We develop stunning websites tailored to businesses' unique needs. With our understanding of the digital landscape, empower your brand to establish a strong online presence."></meta>
+		 <meta name="keywords" content="Websites, digital, businesses' unique needs, web solutions, functional websites, Web development in UAE, website developers"></meta>
 		<meta property="og:type" content="website"></meta>
 		<meta property="og:title" content="Our Work | Agile software & digital marketing company Perth, Australia- QL Tech"></meta>
-		<meta property="og:description" content="Our Clients speaks about Our works. QL Tech's web & digital marketing services team achieved for business numbers as yours. To know more, contact us @ +61 (0)8 6262 3559"></meta>
+		<meta property="og:description" content="We develop stunning websites tailored to businesses' unique needs. With our understanding of the digital landscape, empower your brand to establish a strong online presence."></meta>
 		<meta property="twitter:card" content="summary_large_image"></meta>
 		<meta property="twitter:title" content="Our Work | Agile software & digital marketing company Perth, Australia- QL Tech"></meta>
-		<meta property="twitter:description" content="Our Clients speaks about Our works. QL Tech's web & digital marketing services team achieved for business numbers as yours. To know more, contact us @ +61 (0)8 6262 3559"></meta>
+		<meta property="twitter:description" content="We develop stunning websites tailored to businesses' unique needs. With our understanding of the digital landscape, empower your brand to establish a strong online presence."></meta>
 		</Helmet>
 	 <div className="bg">
         <div className="area-bg">
@@ -196,7 +196,7 @@ class FilterGrid extends React.Component {
 			<div className="container text-center">
 				<span className="section-subheading-heading">Professional Website Creation</span> 
 				<h1 className="section-heading">
-            Professional Website Creation
+            Customized web solutions at competitive prices in UAE
 				</h1>
 				<ul className="breadcrumbs">
 					<li> <Link to="/">Home</Link> \</li>
