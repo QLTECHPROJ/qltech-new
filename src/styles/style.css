@@ -4,6 +4,60 @@
 @import url('./flaticon.css');
 
 /*=== UAE ===*/
+
+.top-space {
+    height: auto;
+}
+section.tpbg .section-heading {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 35px;
+    font-weight: 600;
+}
+section.tpbg {
+    background-color: #25a8e1;
+    background-position: 50%;
+    background-size: auto 100%;
+    border-bottom: 10px solid #fff;
+    box-shadow: 0 10px 13px -7px rgba(0, 0, 0, .05);
+    padding: 100px 0;
+    position: relative;
+    z-index: 9;
+    box-sizing: border-box;
+    background-image: url(https://steamlinedesign.com/pdg/images/drf.webp);
+}
+section.tpbg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: hsl(198deg 75% 50% / 80%);
+    height: 100%;
+    width: 100%;
+}
+section.tpbg .container {
+    z-index: 99;
+    position: relative;
+}
+.section-subheading-heading {
+    font-size: 20px;
+    color: #fff;
+    opacity: 1;
+}
+section.tpbg .breadcrumbs li {
+    color: #fff;
+    opacity: 1;
+}
+section.tpbg .breadcrumbs li a {
+    color: #fff;
+}
+
+
+
+
+
+
 	.price-top h4 {
     font-size: 20px !important;
 }
