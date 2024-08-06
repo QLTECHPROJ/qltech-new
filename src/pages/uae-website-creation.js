@@ -337,33 +337,23 @@ class FilterGrid extends React.Component {
 		<div class="container">
 			<div class="main-panel">
 				<div class="row">
-					<div class="col-12">
+					<div class="col-lg-6 col-6 col-md-12">
 						<h2 class="section-heading text-center mb-5">{post.contactUsTitle}</h2>
 						<div class="label-text" dangerouslySetInnerHTML={{ __html: post.contactUsDesc }} 
 						/>
-					</div>
-				</div>
-			</div>
-		</div>
-		</section>
-			<section className="about-us-section-1  bg-white">
-		<div class="container">
-			<div class="main-panel">
-				<div class="row justify-content-center">
-					<div class="col-lg-8 col-md-10">
 						<p class="inf_cl_p">Feel free to contact us on </p>
 						<h5 class="inf_cl"> <b>Email :</b><a href="mailto:sales@qltech.com.au" >sales@qltech.com.au</a></h5>
-						<h5 class="inf_cl" > <b>Phone :</b> +971 58 924 6249 (UAE)</h5>																															       
+						<h5 class="inf_cl" > <b>Phone :</b> +971 58 924 6249 (UAE)</h5>
+					</div>
+					<div class="col-lg-6 col-6 col-md-12">
+					<Webcontact />
 					</div>
 				</div>
 			</div>
 		</div>
-		</section>																															     
-		<section className="about-us-section-1  bg-white">
-			<div class="container">
-			<Webcontact />
-			</div>
 		</section>
+																																		     
+		
 		<ReactModal  
         isOpen={this.state.isModalOpen}
         onRequestClose={this.handleModalClose}
