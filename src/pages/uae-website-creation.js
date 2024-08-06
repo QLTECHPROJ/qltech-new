@@ -185,7 +185,56 @@ class FilterGrid extends React.Component {
 		<meta property="twitter:card" content="summary_large_image"></meta>
 		<meta property="twitter:title" content="Our Work | Agile software & digital marketing company Perth, Australia- QL Tech"></meta>
 		<meta property="twitter:description" content="We develop stunning websites tailored to businesses' unique needs. With our understanding of the digital landscape, empower your brand to establish a strong online presence."></meta>
-		</Helmet>
+	<style type="text/css">
+	    .top-space {
+    height: auto !important;
+}
+section.breadcumbs-and-title-section.tpbg .section-heading {
+    color: #fff !important;
+    margin-bottom: 10px !important;
+    font-size: 35px !important;
+    font-weight: 600 !important;
+}
+section.breadcumbs-and-title-section.tpbg {
+    background-color: #25a8e1 !important;
+    background-position: 50% !important;
+    background-size: auto 100% !important;
+    border-bottom: 10px solid #fff !important;
+    box-shadow: 0 10px 13px -7px rgba(0, 0, 0, .05) !important;
+    padding: 100px 0 !important;
+    position: relative !important;
+    z-index: 9 !important;
+    box-sizing: border-box !important;
+    background-image: url(https://steamlinedesign.com/pdg/images/drf.webp) !important;;
+}
+section.breadcumbs-and-title-section.tpbg::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 1 !important;
+    background: hsl(198deg 75% 50% / 80%) !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+section.breadcumbs-and-title-section.tpbg .container {
+    z-index: 99 !important;
+    position: relative !important;
+}
+.section-subheading-heading {
+    font-size: 20px !important;
+    color: #fff !important;
+    opacity: 1 !important;
+}
+section.breadcumbs-and-title-section.tpbg .breadcrumbs li {
+    color: #fff !important;
+    opacity: 1 !important;
+}
+section.breadcumbs-and-title-section.tpbg .breadcrumbs li a {
+    color: #fff !important;
+}
+	    </style>
+	    </Helmet>
 	 <div className="bg">
         <div className="area-bg">
 			<Particles options={{"particles": {"number": {"value": 80,"density": {"enable": true,"value_area": 1600}},"color": {"value": ["#fd8788", "#f1aea6", "#21a6df", "#75d3ff"]},"shape": {"type": "circle","stroke": {"width": 0,"color": "#000000",},"polygon": {"nb_sides": 5,},"image": {"src": "img/github.svg","width": 100,"height": 100}},"opacity": {"value": 0.4489553770423464,"random": false,"anim": {"enable": false,"speed": 40,"opacity_min": 0.1,"sync": false}},"size": {"value": 5,"random": true,"anim": {"enable": false,"speed": 40,"size_min": 0.1,"sync": false}},"line_linked": {"enable": false,"distance": 150,"color": "#ffffff","opacity": 0.4,"width": 1},"move": {"enable": true,"speed": 6,"direction": "none","random": false,"straight": false,"out_mode": "out","bounce": false,"attract": {"enable": false,"rotateX": 600,"rotateY": 1200}}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": true,"mode": "grab"},"onclick": {"enable": true,"mode": "push"},"resize": true},"modes": {"grab": {"distance": 140,"line_linked": {"opacity": 0}},"bubble": {"distance": 400,"size": 40,"duration": 2,"opacity": 8,"speed": 3},"repulse": {"distance": 200,"duration": 0.4},"push": {"particles_nb": 4},"remove": {"particles_nb": 2}}},"retina_detect": true}} />
