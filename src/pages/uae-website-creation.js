@@ -333,7 +333,7 @@ class FilterGrid extends React.Component {
 		</div>
 		</section>
 		
-		<section className="about-us-section-1  bg-white">
+		<section className="about-us-section-1 cont_us  bg-white">
 		<div class="container">
 			<div class="main-panel">
 				<div class="row">
