@@ -273,10 +273,13 @@ class FilterGrid extends React.Component {
 		<div class="container">
 			<div class="main-panel">
 				<div class="row">
-					<div class="col-12">
+					<div class="col-7">
 						<h2 class="section-heading text-center mb-5">{post.title}</h2>
 						<div class="label-text" dangerouslySetInnerHTML={{ __html: post.description }} 
 						/>
+					</div>
+					<div class="col-5">
+						<img src="https://steamlinedesign.com/pdg/images/site-image-1-1.webp"/>
 					</div>
 				</div>
 			</div>
@@ -286,7 +289,12 @@ class FilterGrid extends React.Component {
 		<div class="container">
 			<div class="main-panel">
 				<div class="row">
-					<div class="col-12">
+					<div class="col-5">
+						<div class="img_wre">
+							<img src="https://steamlinedesign.com/pdg/images/roi-image.png">
+						</div>
+					</div>
+					<div class="col-7">
 						<h2 class="section-heading text-center mb-5">{post.servicesTitle}</h2>
 						<div class="label-text" dangerouslySetInnerHTML={{ __html: post.servicesDesc }} 
 						/>
