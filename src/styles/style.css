@@ -4,7 +4,39 @@
 @import url('./flaticon.css');
 
 /*=== UAE ===*/
+.ql_lih {
+    column-gap: 20px;
+    display: flex;
+    padding: 0 !important;
+    text-align: center;
+    justify-content: center;
+}
 
+.list_qir {
+    flex: 1;
+}
+
+.icons {
+    width: 100px;
+    margin: 0  auto;
+}
+.heading_e h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.heading_e p {
+    font-size: 16px;
+}
+.our_w {
+    padding: 15px 15px 15px 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.our_w:hover {
+    box-shadow: 0px 0px 9px 5px rgba(0, 0, 0, 0.07);
+    transition: all 0.5s ease-in;
+}
 .modal-dialog .modal-content form {
     height: 500px;
     overflow-y: scroll;
