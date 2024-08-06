@@ -175,7 +175,7 @@ class FilterGrid extends React.Component {
       // Filter Buttons
 	  <Layout>
 	  	<Helmet>
-		<title>Your Premier Destination for Professional Website Creation- QL Tech</title>
+		<title>Customized web solutions at competitive prices in UAE - QL Tech</title>
 		<meta name="title" content="Our Work | Agile software & digital marketing company Perth, Australia- QL Tech"></meta>
 		<meta name="description" content="We develop stunning websites tailored to businesses' unique needs. With our understanding of the digital landscape, empower your brand to establish a strong online presence."></meta>
 		 <meta name="keywords" content="Websites, digital, businesses' unique needs, web solutions, functional websites, Web development in UAE, website developers"></meta>
