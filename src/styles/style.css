@@ -4,6 +4,93 @@
 @import url('./flaticon.css');
 
 /*=== UAE ===*/
+
+.ql_lih {
+    column-gap: 20px;
+    display: flex;
+    padding: 0 !important;
+    text-align: center;
+    justify-content: center;
+}
+
+.list_qir {
+    flex: 1;
+}
+
+.icons {
+    width: 100px;
+    margin: 0  auto;
+}
+.heading_e h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.heading_e p {
+    font-size: 16px;
+}
+.our_w {
+    padding: 15px 15px 15px 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.our_w:hover {
+    box-shadow: 0px 0px 9px 5px rgba(0, 0, 0, 0.07);
+    transition: all 0.5s ease-in;
+}
+ul.icontsd {
+    display: flex;
+    column-gap: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 19px;
+}
+
+
+.icon_img img {
+    width: 40px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.icon_text {
+    text-align: center;
+    box-shadow: 0 0 24px #0000000f;
+    border-radius: 10px;
+    background: white;
+    padding: 10px;
+}
+
+.icon_img  p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.rgff {
+    flex: 1;
+}
+section.about-us-section-1.icongv.bg-white {
+    background: url('https://steamlinedesign.com/pdg/images/industries_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+}
+
+.icn_box {
+    border: 0;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 22px;
+    text-align: center;
+    box-shadow: 0 0 24px #0000000f;
+    border-radius: 10px;
+    background: white;
+}
+
+.icn_box p {
+    font-size: 14px;
+}
+
 .ql_lih {
     column-gap: 20px;
     display: flex;
