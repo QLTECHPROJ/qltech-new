@@ -274,7 +274,7 @@ class FilterGrid extends React.Component {
 			<div class="main-panel">
 				<div class="row">
 					<div class="col-7">
-						<h2 class="section-heading text-center mb-5">{post.title}</h2>
+						<h2 class="section-heading text-start   mb-5">{post.title}</h2>
 						<div class="label-text" dangerouslySetInnerHTML={{ __html: post.description }} 
 						/>
 					</div>
