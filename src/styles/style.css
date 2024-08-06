@@ -10,7 +10,10 @@
     margin-bottom: 0  !important;
     box-sizing: border-box  !important;
 }
-
+.icn_img {
+    width: 60px  !important;
+    margin-bottom: 5px !important;
+}
 
 ul.icontsd {
     justify-content: start !important;
