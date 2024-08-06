@@ -4,6 +4,22 @@
 @import url('./flaticon.css');
 
 /*=== UAE ===*/
+	.price-top h4 {
+    font-size: 20px !important;
+}
+.price-item .price-top .pric {
+    margin-top: 10px !important;
+}
+.price-content ul {
+    min-height: 470px !important;
+    margin-top: 0 !important;
+    display: block !important;
+    vertical-align: top !important;
+}
+
+.price-item, .price-item .price-top {
+    border-radius: 20px;
+}
 .cont_us {
     background: #f5fafe !important;
 }
