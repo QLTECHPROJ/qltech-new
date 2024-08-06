@@ -4,7 +4,10 @@
 @import url('./flaticon.css');
 
 /*=== UAE ===*/
-
+ul.icontsd {
+    justify-content: start !important;
+    padding: 0;
+}
 .ql_lih {
     column-gap: 20px;
     display: flex;
