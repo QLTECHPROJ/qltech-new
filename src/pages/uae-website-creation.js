@@ -291,7 +291,7 @@ class FilterGrid extends React.Component {
 				<div class="row">
 					<div class="col-5">
 						<div class="img_wre">
-							<img src="https://steamlinedesign.com/pdg/images/roi-image.png">
+							<img src="https://steamlinedesign.com/pdg/images/roi-image.png"/>
 						</div>
 					</div>
 					<div class="col-7">
