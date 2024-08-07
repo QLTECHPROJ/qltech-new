@@ -4,9 +4,7 @@
 @import url('./flaticon.css');
 
 /*=== UAE ===*/
-.top-space {
-    height: auto !important;
-}
+
 section.breadcumbs-and-title-sections .section-heading {
     color: #fff !important;
     margin-bottom: 10px !important;
@@ -51,9 +49,7 @@ section.breadcumbs-and-title-sections .breadcrumbs li {
 section.breadcumbs-and-title-sections .breadcrumbs li a {
     color: #fff !important;
 }
-.top-space {
-    height: auto;
-}
+
 section.tpbg .section-heading {
     color: #fff;
     margin-bottom: 10px;
