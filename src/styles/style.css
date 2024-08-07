@@ -4,6 +4,60 @@
 @import url('./flaticon.css');
 
 /*=== UAE ===*/
+@media (max-width: 991px) and (min-width: 768px){
+	.price-item .price-content ul {
+        min-height: 675px !important;
+    }
+    .icon_img {
+    text-align: center;
+}
+.icon_img img {
+    margin: 0  auto;
+    display: block;
+    margin-bottom: 10px;
+}
+.heading_e p {
+    font-size: 14px !important;
+    line-height: 17px !important;
+}
+.cont_us h2.section-heading {
+    text-align: left !important;
+}
+.icn_box p {
+        word-wrap: break-word;
+        font-size: 12px !important;
+        line-height: 15px !important;
+        min-height: 31px !important;
+    }
+    .icon_img p {
+    font-size: 14px !important;
+    margin-top: 0 !important;
+    line-height: 17px !important;
+}
+}
+
+@media (max-width: 767px){
+	.price-item .price-content {
+    margin-bottom: 20px !important;
+}
+
+.price-item .price-content li {
+    text-align: left !important;
+}
+.price-item .price-content ul {
+        min-height: unset !important;
+    }
+        section.about-us-section-1.bg-white .col-5 {
+        flex: 100% !important;
+        max-width: 100% !important;
+        order: 2;
+    }
+    .icongv .icn_box p {
+    font-size: 14px !important;
+    line-height: 17px !important;
+    min-height: 40px !important;
+}
+}
 .icon_img img {
     display: block !important;
     margin: auto !important;
