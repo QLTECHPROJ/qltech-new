@@ -6,7 +6,7 @@
 /*=== UAE ===*/
 .tpbg{
 	margin-top: -100px;
-  padding-top: 100px;
+  padding-top: 100px !important;
 }
 section.breadcumbs-and-title-sections .section-heading {
     color: #fff !important;
