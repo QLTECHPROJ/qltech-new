@@ -280,7 +280,7 @@ class FilterGrid extends React.Component {
 						/>
 					</div>
 					<div class="col-5">
-						<img src="https://admin.qltech.com.au/wp-content/uploads/2024/08/UAE-Web-Banner-01.png"/>
+						<img src="https://admin.qltech.com.au/wp-content/uploads/2024/08/UAE-Web-Banner-01-2.png"/>
 					</div>
 				</div>
 			</div>
@@ -292,7 +292,7 @@ class FilterGrid extends React.Component {
 				<div class="row">
 					<div class="col-5">
 						<div class="img_wre">
-							<img src="https://admin.qltech.com.au/wp-content/uploads/2024/08/UAE-Web-Banner-02.png"/>
+							<img src="https://admin.qltech.com.au/wp-content/uploads/2024/08/UAE-Web-Banner-02-1.png"/>
 						</div>
 					</div>
 					<div class="col-7">
