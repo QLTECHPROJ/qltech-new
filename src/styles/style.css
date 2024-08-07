@@ -40,16 +40,16 @@ section.breadcumbs-and-title-sections .container {
     z-index: 99 !important;
     position: relative !important;
 }
-.section-subheading-heading {
+.tpbg .section-subheading-heading {
     font-size: 20px !important;
     color: #fff !important;
     opacity: 1 !important;
 }
-section.breadcumbs-and-title-sections .breadcrumbs li {
+section.tpbg .breadcrumbs li {
     color: #fff !important;
     opacity: 1 !important;
 }
-section.breadcumbs-and-title-sections .breadcrumbs li a {
+section.tpbg .breadcrumbs li a {
     color: #fff !important;
 }
 
