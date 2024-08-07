@@ -386,7 +386,7 @@ class FilterGrid extends React.Component {
 										<div className="col-md-12 mb-4">
 											<label className="label-text">Company Name</label>
 											<input type="email" className="form-control" value={this.state.cn} onChange={this.cn} placeholder="" name="email" required/>
-											{this.validator.message('Company Name', this.state.cn, 'required|email')}
+											{this.validator.message('Company Name', this.state.cn, 'required')}
 										</div>
 									 <div className="col-md-12 mb-4">
 											<label className="label-text">Industry</label>
