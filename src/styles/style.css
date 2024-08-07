@@ -4,6 +4,59 @@
 @import url('./flaticon.css');
 
 /*=== UAE ===*/
+.icon_img img {
+    display: block !important;
+    margin: auto !important;
+    margin-bottom: 10px !important;
+}
+
+.icon_img p {
+    margin-top: 0 !important;
+}
+
+.label-text ul {
+    padding-left: 0 !important;
+}
+
+@media (max-width: 1199px) and (min-width: 992px){
+	    .price-item .price-top h4 {
+        font-size: 16px !important;
+    }
+        .price-item .price-content ul {
+        min-height: 585px !important;
+    }
+    .our_w .heading_e h3 {
+        font-size: 16px !important;
+    }
+    .heading_e p {
+        font-size: 14px !important;
+        min-height: 50px !important;
+    }
+    .label-text ul {
+    box-sizing: border-box;
+    padding-left: 0 !important;
+}
+.icon_img p {
+    font-size: 14px !important;
+    margin-top: 0px !important;
+}
+.icon_img img {
+    margin: 0 auto !important;
+    display: block !important;
+    margin-bottom: 10px !important;
+}
+.icn_box p {
+        font-size: 12px !important;
+    }
+       .icn_box p {
+        font-size: 12px !important;
+        min-height: 30px !important;
+        line-height: 15px !important;
+    }
+}
+
+
+
 icon_img img {
     display: block;
     margin: 0 auto;
