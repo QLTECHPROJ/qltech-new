@@ -4,6 +4,10 @@
 @import url('./flaticon.css');
 
 /*=== UAE ===*/
+.modal .modal-content .close {
+    top: 5px !important;
+    right: 15px !important;
+}
 @media (max-width: 991px) and (min-width: 768px){
 	.price-item .price-content ul {
         min-height: 675px !important;
