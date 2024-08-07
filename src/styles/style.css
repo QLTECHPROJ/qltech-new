@@ -4,6 +4,153 @@
 @import url('./flaticon.css');
 
 /*=== UAE ===*/
+icon_img img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.icn_box p {
+    margin-bottom: 0 !important;
+}
+	@media(max-width:1199px) and (min-width:992px) {
+		.price-item, .price-item .price-top{
+			border-radius: 20px;
+		}
+		.price-top h4 {
+    font-size: 16px !important;
+}
+.pric{
+	font-size: 20px;
+	}
+
+.price-content ul{
+	min-height: 585px !important;
+}
+.icons{
+	width: 80px;
+}
+.heading_e h3{
+	font-size: 16px;
+}
+.heading_e p {
+    font-size: 14px;
+    min-height: 50px;
+}
+.icn_box p {
+    font-size: 12px;
+}
+}
+@media(max-width:991px) and (min-width:768px) {
+
+section.about-us-section-1.bg-white .main-panel .row.justify-content-center {
+    justify-content: start !important;
+}
+
+section.about-us-section-1.bg-white .main-panel .row.justify-content-center .col-md-6.col-lg-4.mb-30 {
+    max-width: 33.33%;
+    flex: 1;
+}
+
+.price-item, .price-item .price-top {
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0 rgba(39, 39, 39, .15);
+}
+
+.price-top h4 {
+    font-size: 20px !important;
+}
+
+.price-content ul li {
+    text-align: left !important;
+    margin: 0 !important;
+}
+
+.price-item .price-content {
+    padding-left: 15px;
+    padding-right: 15px !important;
+}
+
+.price-item .price-content li {
+    font-size: 14px;
+}
+
+.price-content ul {
+    min-height: 550px !important;
+}
+ul.ql_lih .icons {
+    width: 60px;
+}
+.icn_box p {
+    font-size: 12px;
+    line-height: 15px;
+    word-wrap: break-word;
+    min-height: 31px;
+}
+.cont_us .col-lg-10.col-md-10 {
+    flex: 100%;
+    max-width: 100%;
+}
+section.breadcumbs-and-title-section.tpbg {
+    padding-top: 50px !important;
+}
+
+section.breadcumbs-and-title-section.tpbg h1.section-heading {
+    font-size: 20px !important;
+}
+}
+@media(max-width:767px){
+	.price-content ul {
+    min-height: unset !important;
+}
+section.about-us-section-1.bg-white .main-panel .row.justify-content-center .col-md-6.col-lg-4.mb-30 {
+    margin-bottom: 20px;
+}
+.price-item.text-center {
+    box-shadow: 0 0px 10px 0 rgba(39,39,39,.15);
+}
+
+.price-item .price-content li {
+    text-align: left;
+}
+ul.ql_lih {
+    display: block;
+}
+
+ul.ql_lih li.list_qir {display: block;margin-bottom: 25px !important;}
+
+section.about-us-section-1.bg-white .col-7 {
+    flex: 100% !important;
+    max-width: 100% !important;
+    text-align: left;
+}
+
+section.about-us-section-1.bg-white .col-5 {
+    flex: 100% !important;
+    max-width: 100% !important;
+    order: 2;
+}
+.icongv   .col-2.pad20 {
+    max-width: 50%;
+    flex: 50%;
+}
+
+.cont_us .main-panel .col-lg-6.col-6.col-md-12 {
+    flex: 100%;
+    max-width: 100% !important;
+}
+.cont_us {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+    box-sizing: border-box;
+}
+section.breadcumbs-and-title-section.tpbg {
+    padding-top: 50px !important;
+}
+
+section.breadcumbs-and-title-section.tpbg h1.section-heading {
+    font-size: 20px !important;
+}
+}
 .tpbg{
 	margin-top: -100px;
   padding-top: 100px !important;
