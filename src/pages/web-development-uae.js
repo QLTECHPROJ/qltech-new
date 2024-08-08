@@ -339,7 +339,7 @@ class FilterGrid extends React.Component {
 			<div class="main-panel">
 				<div class="row">
 					<div class="col-lg-6 col-6 col-md-12">
-						<h2 class="section-heading text-center mb-5">{post.contactUsTitle}</h2>
+						<h2 class="section-heading text-start  mb-5">{post.contactUsTitle}</h2>
 						<div class="label-text" dangerouslySetInnerHTML={{ __html: post.contactUsDesc }} 
 						/>
 						<p class="inf_cl_p">Feel free to contact us on </p>
