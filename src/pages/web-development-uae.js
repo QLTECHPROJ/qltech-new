@@ -422,9 +422,9 @@ class FilterGrid extends React.Component {
 											<option value="Less than 5"> Less than 5</option>
 											<option value="10-20">  10-20</option>
 											<option value="20-50">  20-50</option>
-											<option value="Less than 50">  Less than 50 </option>
+									
 											<option value="50-100">  50-100</option>
-											<option value="Less than 100"> Less than 100</option>
+											<option value="More than 100"> More than 100</option>
 										
 											
 											</select>
