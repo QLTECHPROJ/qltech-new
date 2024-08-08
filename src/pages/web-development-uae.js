@@ -420,7 +420,9 @@ class FilterGrid extends React.Component {
 											<select className="form-control"  >
 											<option value="">Select Company Size</option>
 											<option value="Less than 5"> Less than 5</option>
-											<option value="10-20">  10-20</option>
+											
+											<option value="5-10">  5-10</option>
+												<option value="10-20">  10-20</option>
 											<option value="20-50">  20-50</option>
 									
 											<option value="50-100">  50-100</option>
