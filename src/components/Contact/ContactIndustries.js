@@ -173,7 +173,7 @@ class ContactIndustries extends React.Component{
 										<div className="col-md-12 mt-3">
 											<ReCAPTCHA
 												ref={recaptchaRef}
-												sitekey=" 6Lc5jjEUAAAAAI1yf3CfFogxqiok5pt7wcF7_SKJ"
+												sitekey="6LfliiwqAAAAACFOqWuUVddqUrHE2DQUbaxTRNKk"
 											/>
 										</div>
 										
