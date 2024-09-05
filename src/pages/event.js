@@ -52,6 +52,7 @@ class FilterGrid extends React.Component {
         itemSelector: '.grid-item',
         layoutMode: "fitRows",
         percentPosition: true,
+	sortBy: 'number',     
         fitRows: {
           gutter: '.gutter-sizer'
         }
