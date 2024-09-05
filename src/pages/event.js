@@ -195,7 +195,7 @@ const Event = () => (
 		  }
 		}	
 	  }
-	  allWpCategory(filter: {slug: {regex: "/event/"}}, sort: {fields: databaseId, order: ASC}) {
+	  allWpCategory(filter: {slug: {regex: "/event/"}}, sort: {fields: databaseId, order: DESC}) {
 		
 			edges {
 			  node {
