@@ -175,7 +175,7 @@ const Event = () => (
 	<StaticQuery
     query = {graphql`
       query{
-        allWpEvent {
+        allWpEvent (sort: {fields: databaseId, order: DESC}) {
 		edges {
 		  node {
 			id
