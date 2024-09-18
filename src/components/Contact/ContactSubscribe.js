@@ -43,7 +43,7 @@ class ContactSubscribe extends Component{
 			  	form_name: 'Email',
 			 
 			}
-
+var self = this;
 			axios({
 			  method: 'post',
 			  url: 'https://steamlinedesign.com/qltech/formbucket/',
@@ -54,15 +54,15 @@ class ContactSubscribe extends Component{
 			  }, 
 			}).then(function(response) {
 				console.log("here");
-			this.setState({shown: "d-block"});
+			self.setState({shown: "d-block"});
 		
-		this.setState({email: " "});
+		self.setState({email: " "});
 		setTimeout(
 			function() {
-				this.setState({shown: "d-none"});
+				self.setState({shown: "d-none"});
 				
 			}
-			.bind(this),
+			.bind(self),
 			3000
 		);
 		    });	
