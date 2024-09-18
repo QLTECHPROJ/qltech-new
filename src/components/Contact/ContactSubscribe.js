@@ -53,6 +53,7 @@ class ContactSubscribe extends Component{
 			  'Content-Type': 'multipart/form-data'
 			  }, 
 			}).then(function(response) {
+				console.log("here");
 			this.setState({shown: "d-block"});
 		
 		this.setState({email: " "});
