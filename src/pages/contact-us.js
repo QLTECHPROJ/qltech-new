@@ -59,7 +59,7 @@ const IndexPage = () => (
 									<div className="col-md-5">
 										<p className="section-heading-3  mb-0">Australia</p>
 										<a href="tel:+61 8 6262 3559" className="nav-link d-block pl-0 pb-0">
-												+61 8 6262 3559
+												+61 4 0405 4124
 											</a>
 										
 									</div>
