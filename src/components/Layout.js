@@ -24,7 +24,7 @@ const TemplateWrapper = ({ children }) => (
 	<Footer />
 	{/* WhatsApp icon */}
       <a
-        href="https://wa.me/+971589246249"
+        href="https://wa.me/+61404054124"
         class="whatsapp_float"
         target="_blank"
         rel="noopener noreferrer"
