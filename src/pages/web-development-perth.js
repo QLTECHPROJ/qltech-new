@@ -175,15 +175,15 @@ class FilterGrid extends React.Component {
       // Filter Buttons
 	  <Layout>
 	  	<Helmet>
-		<title>Web Development Services Dubai | Web Development Agency UAE - QL Tech</title>
-		<meta name="title" content="Web Development Services Dubai | Web Development Agency UAE - QL Tech"></meta>
+		<title>Web Development Services Perth | Web Development Agency Perth - QL Tech</title>
+		<meta name="title" content="Web Development Services Perth | Web Development Agency Perth - QL Tech"></meta>
 		<meta name="description" content="We develop stunning websites tailored to businesses' unique needs. With our understanding of the digital landscape, empower your brand to establish a strong online presence."></meta>
-		 <meta name="keywords" content="Websites, digital, businesses' unique needs, web solutions, functional websites, Web development in UAE, website developers"></meta>
+		 <meta name="keywords" content="Websites, digital, businesses' unique needs, web solutions, functional websites, Web development in Perth, website developers"></meta>
 		<meta property="og:type" content="website"></meta>
-		<meta property="og:title" content="Web Development Services Dubai | Web Development Agency UAE - QL Tech"></meta>
+		<meta property="og:title" content="Web Development Services Perth | Web Development Agency Perth - QL Tech"></meta>
 		<meta property="og:description" content="We develop stunning websites tailored to businesses' unique needs. With our understanding of the digital landscape, empower your brand to establish a strong online presence."></meta>
 		<meta property="twitter:card" content="summary_large_image"></meta>
-		<meta property="twitter:title" content="Web Development Services Dubai | Web Development Agency UAE - QL Tech"></meta>
+		<meta property="twitter:title" content="Web Development Services Perth | Web Development Agency Perth - QL Tech"></meta>
 		<meta property="twitter:description" content="We develop stunning websites tailored to businesses' unique needs. With our understanding of the digital landscape, empower your brand to establish a strong online presence."></meta>
 	
 	    </Helmet>
@@ -197,7 +197,7 @@ class FilterGrid extends React.Component {
 			<div className="container text-center">
 				<span className="section-subheading-heading">Professional Website Creation</span> 
 				<h1 className="section-heading">
-            Customized web solutions at competitive prices in UAE
+            Customized web solutions at competitive prices in Perth Australia
 				</h1>
 				<ul className="breadcrumbs">
 					<li> <Link to="/">Home</Link> \</li>
@@ -344,7 +344,7 @@ class FilterGrid extends React.Component {
 						/>
 						<p class="inf_cl_p">Feel free to contact us on </p>
 						<h5 class="inf_cl"> <b>Email : <a href="mailto:sales@qltech.com.au" >sales@qltech.com.au</a></b></h5>
-						<h5 class="inf_cl" > <b>Phone : +971 58 924 6249 (UAE)</b></h5>
+						<h5 class="inf_cl" > <b>Phone : +61 4 0405 4124 (AUD)</b></h5>
 					</div>
 					<div class="col-lg-6 col-6 col-md-12">
 					<Webcontact />
