@@ -65,7 +65,7 @@ const IndexPage = () => (
 									</div>
 									<div className="col-md-5">
 										<p className="section-heading-3 mb-0">India</p>
-										<a href="tel:+91 79 4006 1419"  className="nav-link">+91 7405 216516</a>
+										<a href="tel:+91 79 4006 1419"  className="nav-link">+91 92565 41169</a>
 										
 									</div>
 								</div>
